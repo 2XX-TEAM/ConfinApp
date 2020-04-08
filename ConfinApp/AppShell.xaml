@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:views="clr-namespace:ConfinApp.Views"
+       FlyoutBackgroundImageAspect="AspectFill"
+       FlyoutHeaderBehavior="CollapseOnScroll"
+       Navigating="OnNavigating"
+       Navigated="OnNavigated"
+       x:Class="ConfinApp.AppShell">
+    <!-- 
+        Styles and Resources 
+    -->
+    <Shell.Resources>
+        <Style x:Key="BaseStyle"
+               TargetType="Element">
+            <Setter Property="Shell.BackgroundColor"
+                    Value="#455A64" />
+            <Setter Property="Shell.ForegroundColor"
+                    Value="White" />
+            <Setter Property="Shell.TitleColor"
+                    Value="White" />
+            <Setter Property="Shell.DisabledColor"
+                    Value="#B4FFFFFF" />
+            <Setter Property="Shell.UnselectedColor"
+                    Value="#95FFFFFF" />
+        </Style>
+    </Shell.Resources>
+
+    <!-- Template for FlyoutHeader -->
+    <Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <Grid BackgroundColor="Black"
+                    HeightRequest="200">
+                <Image Aspect="AspectFill"
+                       Source="xamarinstore.jpg"
+                       Opacity="0.6" />
+                <Label Text="Animals" 
+                        TextColor="White"
+                        FontFamily="{StaticResource BoldFont}"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center" />
+            </Grid>            
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
+
+    <!-- Template each FlyoutItem -->
+    <Shell.ItemTemplate>
+        <DataTemplate>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.2*" />
+                    <ColumnDefinition Width="0.8*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="{Binding Icon}"
+                       Margin="5"
+                       HeightRequest="45" />
+                <Label Grid.Column="1"
+                       Text="{Binding Title}"
+                       FontFamily="{StaticResource NormalFont}"
+                       VerticalTextAlignment="Center" /> 
+            </Grid>
+        </DataTemplate>
+    </Shell.ItemTemplate>
+
+    <!-- Template each MenuItem -->
+    <Shell.MenuItemTemplate>
+        <DataTemplate>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.2*" />
+                    <ColumnDefinition Width="0.8*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="{Binding Icon}"
+                       Margin="5"
+                       HeightRequest="45" />
+                <Label Grid.Column="1"
+                       Text="{Binding Text}"
+                       FontFamily="{StaticResource NormalFont}"
+                       VerticalTextAlignment="Center" /> 
+            </Grid>
+        </DataTemplate>
+    </Shell.MenuItemTemplate>
+
+
+    <!--Notícies-->
+    <FlyoutItem Route="informacio"
+                Title="Informacio"
+                FlyoutDisplayOptions="AsMultipleItems">
+        <Tab Title="Notícies"
+             Route="noticies"
+             Icon="paw.png">
+            <ShellContent Route="gencat"
+                          Style="{StaticResource BaseStyle}"
+                          Title="@gencat"
+                          ContentTemplate="{DataTemplate views:GencatPage}"/>
+            <ShellContent Route="salut"
+                          Style="{StaticResource BaseStyle}"
+                          Title="@salut"
+                          ContentTemplate="{DataTemplate views:SalutPage}"/>
+            <ShellContent Route="mossos"
+                          Style="{StaticResource BaseStyle}"
+                          Title="@mossos"
+                          ContentTemplate="{DataTemplate views:MossosPage}"/>
+
+
+        </Tab>
+
+        <ShellContent Route="monkeys"
+                      Style="{StaticResource BaseStyle}"
+                      Title="#2"
+                      Icon="monkey.png"
+                      ContentTemplate="{DataTemplate views:MossosPage}"/>
+        <ShellContent Route="elephants"
+                      Style="{StaticResource BaseStyle}"
+                      Title="#3"
+                      Icon="elephant.png"
+                      ContentTemplate="{DataTemplate views:MossosPage}" />
+        <ShellContent Route="bears"
+                      Style="{StaticResource BaseStyle}"
+                      Title="#4"
+                      Icon="bear.png"
+                      ContentTemplate="{DataTemplate views:MossosPage}" />
+    </FlyoutItem>
+</Shell>
