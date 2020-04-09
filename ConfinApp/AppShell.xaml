@@ -82,43 +82,44 @@
     </Shell.MenuItemTemplate>
 
 
-    <!--Notícies-->
     <FlyoutItem Route="informacio"
                 Title="Informacio"
                 FlyoutDisplayOptions="AsMultipleItems">
+
+        <ShellContent Route="avui"
+                      Style="{StaticResource BaseStyle}"
+                      Title="Avui"
+                      Icon="avui.png"
+                      ContentTemplate="{DataTemplate views:MossosPage}"/>
+
         <Tab Title="Notícies"
              Route="noticies"
-             Icon="paw.png">
+             Icon="noticies.png">
             <ShellContent Route="gencat"
                           Style="{StaticResource BaseStyle}"
-                          Title="@gencat"
+                          Title="GENCAT"
                           ContentTemplate="{DataTemplate views:GencatPage}"/>
             <ShellContent Route="salut"
                           Style="{StaticResource BaseStyle}"
-                          Title="@salut"
+                          Title="SALUT"
                           ContentTemplate="{DataTemplate views:SalutPage}"/>
             <ShellContent Route="mossos"
                           Style="{StaticResource BaseStyle}"
-                          Title="@mossos"
+                          Title="MOSSOS"
                           ContentTemplate="{DataTemplate views:MossosPage}"/>
 
 
         </Tab>
 
-        <ShellContent Route="monkeys"
+        <ShellContent Route="evolucio"
                       Style="{StaticResource BaseStyle}"
-                      Title="#2"
-                      Icon="monkey.png"
-                      ContentTemplate="{DataTemplate views:MossosPage}"/>
-        <ShellContent Route="elephants"
-                      Style="{StaticResource BaseStyle}"
-                      Title="#3"
-                      Icon="elephant.png"
+                      Title="Evolució"
+                      Icon="evolucio.png"
                       ContentTemplate="{DataTemplate views:MossosPage}" />
-        <ShellContent Route="bears"
+        <ShellContent Route="contacte"
                       Style="{StaticResource BaseStyle}"
-                      Title="#4"
-                      Icon="bear.png"
-                      ContentTemplate="{DataTemplate views:MossosPage}" />
+                      Title="Contacte"
+                      Icon="contacte.png"
+                      ContentTemplate="{DataTemplate views:ContactePage}" />
     </FlyoutItem>
 </Shell>

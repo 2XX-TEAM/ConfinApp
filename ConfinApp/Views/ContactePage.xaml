@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="ConfinApp.Views.ContactePage"
+             Title="Contacte">
+    <ContentPage.Resources>
+            <Color x:Key="Primary">#FFFFFF</Color>
+            <Color x:Key="LightTextColor">#999999</Color>
+            <Color x:Key="ButtonColor">#FF0000</Color>
+    </ContentPage.Resources>
+    
+    <ScrollView>
+         <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackLayout BackgroundColor="{StaticResource Primary}" 
+                         VerticalOptions="Start" 
+                         HorizontalOptions="Start"
+                         Padding="20,20,0,0">
+                <Label FontSize="17">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Estem amb tu." 
+                                      FontFamily="{StaticResource NormalFont}"
+                                      FontSize="17" />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+            <ScrollView Grid.Row="1">
+                <StackLayout BackgroundColor="{StaticResource Primary}" 
+                             Orientation="Vertical" 
+                             Padding="20,10,0,0"
+                             Spacing="1">
+                    <StackLayout Orientation="Vertical"
+                                 VerticalOptions="Start"
+                                 HorizontalOptions="Start">
+                        <Label FontSize="17">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <FormattedString.Spans>
+                                        <Span Text="Tens una consulta general?" 
+                                              FontFamily="{StaticResource BoldFont}" 
+                                              FontSize="17" />
+                                    </FormattedString.Spans>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <StackLayout Orientation="Vertical"
+                                     VerticalOptions="Start"
+                                     HorizontalOptions="Start">
+                            <Button WidthRequest="220"
+                                    HeightRequest="40"
+                                    Text="Truca 012 Informació" 
+                                    Command="{Binding InformacioCommand, Mode=OneWay}"
+                                    CommandParameter="tel:012"
+                                    BackgroundColor="{StaticResource ButtonColor}"
+                                    TextColor="{StaticResource Primary}"
+                                    FontFamily="{StaticResource BoldFont}" />
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical"
+                                 VerticalOptions="Start"
+                                 HorizontalOptions="Fill"
+                                 Padding="0,10,0,0">
+                        <Label FontSize="17">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <FormattedString.Spans>
+                                        <Span Text="Tens una urgència per coronavirus o sanitària?" 
+                                              FontFamily="{StaticResource BoldFont}" 
+                                              FontSize="17" />
+                                    </FormattedString.Spans>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <StackLayout Orientation="Vertical"
+                                     VerticalOptions="Start"
+                                     HorizontalOptions="Start">
+                            <Button WidthRequest="220"
+                                    HeightRequest="40"
+                                    Text="Truca 061 CatSalut" 
+                                    Command="{Binding CatSalutCommand, Mode=OneWay}"
+                                    CommandParameter="tel:061"
+                                    BackgroundColor="{StaticResource ButtonColor}"
+                                    TextColor="{StaticResource Primary}"
+                                    FontFamily="{StaticResource BoldFont}" />
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical"
+                                 VerticalOptions="Start"
+                                 HorizontalOptions="Fill"
+                                 Padding="0,10,0,0">
+                        <Label FontSize="17">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <FormattedString.Spans>
+                                        <Span Text="Sospites d'un robatori al teu negoci o segona residència?" 
+                                              FontFamily="{StaticResource BoldFont}" 
+                                              FontSize="17" />
+                                    </FormattedString.Spans>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <StackLayout Orientation="Vertical"
+                                     VerticalOptions="Start"
+                                     HorizontalOptions="Start">
+                            <Button WidthRequest="220"
+                                    HeightRequest="40"
+                                    Text="Truca 112 Mossos" 
+                                    Command="{Binding MossosCommand, Mode=OneWay}"
+                                    CommandParameter="tel:112"
+                                    BackgroundColor="{StaticResource ButtonColor}"
+                                    TextColor="{StaticResource Primary}"
+                                    FontFamily="{StaticResource BoldFont}" />
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical"
+                                 VerticalOptions="Start"
+                                 HorizontalOptions="Fill"
+                                 Padding="0,10,0,0">
+                        <Label FontSize="17">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <FormattedString.Spans>
+                                        <Span Text="Pateixes alguna agressió?" 
+                                              FontFamily="{StaticResource BoldFont}" 
+                                              FontSize="17" />
+                                    </FormattedString.Spans>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <StackLayout Orientation="Horizontal"
+                                     VerticalOptions="Start"
+                                     HorizontalOptions="Start">
+                            <Button WidthRequest="143"
+                                    HeightRequest="40"
+                                    Text="Truca'ns" 
+                                    Command="{Binding TrucansCommand, Mode=OneWay}"
+                                    CommandParameter="tel:900900120"
+                                    BackgroundColor="{StaticResource ButtonColor}"
+                                    TextColor="{StaticResource Primary}"
+                                    FontFamily="{StaticResource BoldFont}" />
+                            <Button WidthRequest="143"
+                                    HeightRequest="40"
+                                    Text="Escriu-nos" 
+                                    Command="{Binding EscriunosCommand, Mode=OneWay}"
+                                    CommandParameter="https://wa.me/+34671778540/?text="
+                                    BackgroundColor="{StaticResource ButtonColor}"
+                                    TextColor="{StaticResource Primary}"
+                                    FontFamily="{StaticResource BoldFont}" />
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical"
+                                 VerticalOptions="Start"
+                                 HorizontalOptions="Fill"
+                                 Padding="0,10,0,0">
+                        <Label FontSize="17">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <FormattedString.Spans>
+                                        <Span Text="Tens una emergència?" 
+                                              FontFamily="{StaticResource BoldFont}" 
+                                              FontSize="17" />
+                                    </FormattedString.Spans>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <StackLayout Orientation="Vertical"
+                                     VerticalOptions="Start"
+                                     HorizontalOptions="Start">
+                            <Button WidthRequest="220"
+                                    HeightRequest="40"
+                                    Text="Truca 112 Emergències" 
+                                    Command="{Binding EmergenciesCommand, Mode=OneWay}"
+                                    CommandParameter="tel:112"
+                                    BackgroundColor="{StaticResource ButtonColor}"
+                                    TextColor="{StaticResource Primary}"
+                                    FontFamily="{StaticResource BoldFont}" />
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical"
+                                 VerticalOptions="Start"
+                                 HorizontalOptions="Fill"
+                                 Padding="0,20,0,0">
+                        <Label FontSize="17">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <FormattedString.Spans>
+                                        <Span FontFamily="{StaticResource NormalFont}" 
+                                              FontSize="14"
+                                              Text="Per a més informació consulta a: " />
+                                        <Span FontFamily="{StaticResource NormalFont}" 
+                                              FontSize="14"
+                                              Text="www.gencat.cat"
+                                              TextColor="Blue"
+                                              TextDecorations="Underline">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Command="{Binding GencatCommand, Mode=OneWay}"
+                                                                      CommandParameter="https://web.gencat.cat/ca/inici/" />
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    <Span FontFamily="{StaticResource NormalFont}"
+                                          Text="." />
+                                </FormattedString.Spans>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </StackLayout>
+                </StackLayout>
+
+            </ScrollView>
+        </Grid>
+    </ScrollView>
+</ContentPage>

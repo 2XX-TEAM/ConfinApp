@@ -17,6 +17,11 @@ namespace ConfinApp.Views
                 HorizontalOptions = LayoutOptions.FillAndExpand,
             };
 
+            ToolbarItems.Add(new ToolbarItem("Back", null, () =>
+            {
+                webView.GoBack();
+            }));
+
             Content = new StackLayout
             {
                 Children = { webView }
