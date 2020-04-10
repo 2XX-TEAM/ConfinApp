@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="ConfinApp.Views.ContactePage"
+             BackgroundColor="{StaticResource WhiteColor}"
              Title="Contacte">
     <ContentPage.Resources>
             <Color x:Key="Primary">#FFFFFF</Color>
@@ -25,7 +26,8 @@
                             <FormattedString.Spans>
                                 <Span Text="Estem amb tu." 
                                       FontFamily="{StaticResource NormalFont}"
-                                      FontSize="17" />
+                                      FontSize="17"
+                                      TextColor="Black"/>
                             </FormattedString.Spans>
                         </FormattedString>
                     </Label.FormattedText>
@@ -45,7 +47,8 @@
                                     <FormattedString.Spans>
                                         <Span Text="Tens una consulta general?" 
                                               FontFamily="{StaticResource BoldFont}" 
-                                              FontSize="17" />
+                                              FontSize="17"
+                                              TextColor="Black"/>
                                     </FormattedString.Spans>
                                 </FormattedString>
                             </Label.FormattedText>
@@ -73,7 +76,8 @@
                                     <FormattedString.Spans>
                                         <Span Text="Tens una urgència per coronavirus o sanitària?" 
                                               FontFamily="{StaticResource BoldFont}" 
-                                              FontSize="17" />
+                                              FontSize="17"
+                                              TextColor="Black"/>
                                     </FormattedString.Spans>
                                 </FormattedString>
                             </Label.FormattedText>
@@ -101,7 +105,8 @@
                                     <FormattedString.Spans>
                                         <Span Text="Sospites d'un robatori al teu negoci o segona residència?" 
                                               FontFamily="{StaticResource BoldFont}" 
-                                              FontSize="17" />
+                                              FontSize="17"
+                                              TextColor="Black"/>
                                     </FormattedString.Spans>
                                 </FormattedString>
                             </Label.FormattedText>
@@ -129,7 +134,8 @@
                                     <FormattedString.Spans>
                                         <Span Text="Pateixes alguna agressió?" 
                                               FontFamily="{StaticResource BoldFont}" 
-                                              FontSize="17" />
+                                              FontSize="17"
+                                              TextColor="Black"/>
                                     </FormattedString.Spans>
                                 </FormattedString>
                             </Label.FormattedText>
@@ -165,7 +171,8 @@
                                     <FormattedString.Spans>
                                         <Span Text="Tens una emergència?" 
                                               FontFamily="{StaticResource BoldFont}" 
-                                              FontSize="17" />
+                                              FontSize="17"
+                                              TextColor="Black"/>
                                     </FormattedString.Spans>
                                 </FormattedString>
                             </Label.FormattedText>
@@ -192,10 +199,11 @@
                                 <FormattedString>
                                     <FormattedString.Spans>
                                         <Span FontFamily="{StaticResource NormalFont}" 
-                                              FontSize="14"
-                                              Text="Per a més informació consulta a: " />
+                                              FontSize="15"
+                                              Text="Per a més informació consulta a: "
+                                              TextColor="Black"/>
                                         <Span FontFamily="{StaticResource NormalFont}" 
-                                              FontSize="14"
+                                              FontSize="15"
                                               Text="www.gencat.cat"
                                               TextColor="Blue"
                                               TextDecorations="Underline">
@@ -205,7 +213,8 @@
                                             </Span.GestureRecognizers>
                                         </Span>
                                     <Span FontFamily="{StaticResource NormalFont}"
-                                          Text="." />
+                                          Text="."
+                                          TextColor="Black"/>
                                 </FormattedString.Spans>
                                 </FormattedString>
                             </Label.FormattedText>

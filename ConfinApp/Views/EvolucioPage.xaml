@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
              x:Class="ConfinApp.Views.EvolucioPage"
+             BackgroundColor="{StaticResource WhiteColor}"
              Title="Evolució">
 
     <ContentPage.Resources>
@@ -10,6 +11,7 @@
             <Color x:Key="LightTextColor">#999999</Color>
             <Color x:Key="ButtonColor">#FF0000</Color>
     </ContentPage.Resources>
+
 
     <ScrollView>
         
@@ -21,10 +23,12 @@
                         <FormattedString.Spans>
                             <Span Text="Darrera actualització: "
                                   FontFamily="{StaticResource NormalFont}"
-                                  FontSize="17" />
+                                  FontSize="17"
+                                  TextColor="Black"/>
                             <Span x:Name="dataActualitzacio"
                                   FontFamily="{StaticResource NormalFont}"
-                                  FontSize="17"/>
+                                  FontSize="17"
+                                  TextColor="Black"/>
                         </FormattedString.Spans>
                     </FormattedString>
                 </Label.FormattedText>
@@ -34,36 +38,48 @@
                          HorizontalOptions="Center">
                 <Label Text="Altes"
                        FontFamily="{StaticResource BoldFont}"
-                       TextColor="#008000"/>
+                       TextColor="#008000"
+                       FontSize="17"/>
                 <Label Text="Casos"
                        FontFamily="{StaticResource BoldFont}"
-                       TextColor="#FF0000"/>
+                       TextColor="#FF0000"
+                       FontSize="17"/>
                 <Label Text="Defuncions"
                        FontFamily="{StaticResource BoldFont}"
-                       TextColor="#000000"/>
+                       TextColor="#000000"
+                       FontSize="17"/>
             </StackLayout>
 
             <Label Text="Setmana actual"
-                   FontFamily="{StaticResource BoldFont}" />
+                   FontFamily="{StaticResource BoldFont}"
+                   TextColor="Black"
+                   FontSize="17"/>
             <microcharts:ChartView x:Name="chartViewAvui"
-                                       HeightRequest="250"/>
+                                   HeightRequest="250"/>
             <Label Text="Setmana anterior"
-                   FontFamily="{StaticResource BoldFont}" />
+                   FontFamily="{StaticResource BoldFont}"
+                   TextColor="Black"
+                   FontSize="17"/>
             <microcharts:ChartView x:Name="chartViewSetmana"
-                                       HeightRequest="250" />
+                                   HeightRequest="250" />
             <Label Text="Evolució altes"
-                   FontFamily="{StaticResource BoldFont}" />
+                   FontFamily="{StaticResource BoldFont}"
+                   TextColor="Black"
+                   FontSize="17"/>
             <microcharts:ChartView x:Name="chartViewAltes"
-                                       HeightRequest="150"/>
+                                   HeightRequest="150"/>
             <Label Text="Evolució nous casos"
-                   FontFamily="{StaticResource BoldFont}" />
+                   FontFamily="{StaticResource BoldFont}"
+                   TextColor="Black"
+                   FontSize="17"/>
             <microcharts:ChartView x:Name="chartViewNousCasos"
-                                       HeightRequest="150"/>
+                                   HeightRequest="150"/>
             <Label Text="Evolució defuncions"
-                   FontFamily="{StaticResource BoldFont}" />
+                   FontFamily="{StaticResource BoldFont}"
+                   TextColor="Black"
+                   FontSize="17"/>
             <microcharts:ChartView x:Name="chartViewDefuncions"
-                                       HeightRequest="150"/>
+                                   HeightRequest="150"/>
         </StackLayout>
     </ScrollView>
-   
 </ContentPage>

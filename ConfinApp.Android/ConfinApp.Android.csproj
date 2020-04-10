@@ -74,6 +74,9 @@
     <PackageReference Include="Microcharts">
       <Version>0.7.1</Version>
     </PackageReference>
+    <PackageReference Include="Acr.UserDialogs">
+      <Version>7.1.0.442</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />

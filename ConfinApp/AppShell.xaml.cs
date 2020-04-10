@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using ConfinApp.Models;
 using ConfinApp.Services;
+using ConfinApp.Views;
 using Xamarin.Forms;
 
 namespace ConfinApp
@@ -14,20 +15,8 @@ namespace ConfinApp
         public AppShell()
         {
             InitializeComponent();
-            RegisterRoutes();
             BindingContext = this;
             
-        }
-
-
-        async void RegisterRoutes()
-        {
-            foreach (var item in routes)
-            {
-                Routing.RegisterRoute(item.Key, item.Value);
-            }
-
-            List<COVID19_Cat> covidCatData = await PandemicData.GetIncidenciaCatalunya();
         }
 
         void OnNavigating(object sender, ShellNavigatingEventArgs e)

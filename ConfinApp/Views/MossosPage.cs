@@ -5,6 +5,8 @@ namespace ConfinApp.Views
     public class MossosPage : ContentPage
     {
         private WebView webView;
+        private ToolbarItem goBack;
+        private static readonly string TWITTER_MOSSOS = "https://mobile.twitter.com/mossos?lang=ca";
 
         public MossosPage()
         {
@@ -12,20 +14,35 @@ namespace ConfinApp.Views
 
             webView = new WebView
             {
-                Source = "https://twitter.com/mossos?lang=ca",
+                Source = TWITTER_MOSSOS,
                 VerticalOptions = LayoutOptions.FillAndExpand,
                 HorizontalOptions = LayoutOptions.FillAndExpand,
             };
 
-            ToolbarItems.Add(new ToolbarItem("Back", null, () =>
-            {
-                webView.GoBack();
-            }));
+            webView.Navigated += WebView_Navigated;
 
             Content = new StackLayout
             {
                 Children = { webView }
             };
+
+            goBack = new ToolbarItem("Enrere", null, () =>
+            {
+                webView.GoBack();
+            });
+
+        }
+
+        private void WebView_Navigated(object sender, WebNavigatedEventArgs e)
+        {
+            if (!e.Url.Equals(TWITTER_MOSSOS))
+            {
+                ToolbarItems.Add(goBack);
+            }
+            else
+            {
+                ToolbarItems.Remove(goBack);
+            }
         }
     }
 }

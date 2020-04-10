@@ -5,6 +5,9 @@ namespace ConfinApp.Views
     public class GencatPage : ContentPage
     {
         private WebView webView;
+        private ToolbarItem goBack;
+        private static readonly string TWITTER_GENCAT = "https://mobile.twitter.com/gencat?lang=ca";
+
 
         public GencatPage()
         {
@@ -12,37 +15,36 @@ namespace ConfinApp.Views
 
             webView = new WebView
             {
-                Source = "https://twitter.com/gencat?lang=ca",
+                Source = TWITTER_GENCAT,
                 VerticalOptions = LayoutOptions.FillAndExpand,
                 HorizontalOptions = LayoutOptions.FillAndExpand,
             };
 
-
-            ToolbarItems.Add(new ToolbarItem("Back", null, () =>
-            {
-                webView.GoBack();
-            }));
+            webView.Navigated += WebView_Navigated;
 
             Content = new StackLayout
             {
                 Children = { webView }
             };
 
-        }
-
-        
-        protected override bool OnBackButtonPressed()
-        {
-
-            Device.BeginInvokeOnMainThread(async () =>
+            goBack = new ToolbarItem("Enrere", null, () =>
             {
-                var result = await this.DisplayAlert("Alert", "SDSD", "ASD", "ADA");
-
+                webView.GoBack();
             });
 
-            return true;
         }
 
+        private void WebView_Navigated(object sender, WebNavigatedEventArgs e)
+        {
+            if (!e.Url.Equals(TWITTER_GENCAT))
+            {
+                ToolbarItems.Add(goBack);
+            }
+            else
+            {
+                ToolbarItems.Remove(goBack);
+            }
+        }
     }
 }
 

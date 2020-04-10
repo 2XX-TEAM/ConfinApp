@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ConfinApp.Views.AvuiPage"
+             BackgroundColor="{StaticResource WhiteColor}"
+             Title="Avui">
+
+    <ContentPage.Resources>
+            <Color x:Key="Primary">#FFFFFF</Color>
+            <Color x:Key="LightTextColor">#999999</Color>
+            <Color x:Key="ButtonColor">#FF0000</Color>
+    </ContentPage.Resources>
+    
+    <ScrollView>
+         <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackLayout BackgroundColor="{StaticResource Primary}" 
+                         VerticalOptions="Start" 
+                         HorizontalOptions="Start"
+                         Padding="20,20,0,0">
+                <Label FontSize="17">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Avui " 
+                                      FontFamily="{StaticResource NormalFont}"
+                                      FontSize="17"
+                                      TextColor="Black"/>
+                                <Span x:Name="today"
+                                      FontFamily="{StaticResource NormalFont}"
+                                      FontSize="17"
+                                      TextColor="Black"/>
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+            <ScrollView Grid.Row="1">
+                <StackLayout BackgroundColor="{StaticResource Primary}" 
+                             Orientation="Vertical" 
+                             Padding="20,10,20,0"
+                             Spacing="1">
+                    <StackLayout Orientation="Vertical"
+                                 VerticalOptions="Start"
+                                 HorizontalOptions="Start"
+                                 Margin="0,20,0,0"
+                                 Spacing="10">
+                        <Label FontSize="17">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <FormattedString.Spans>
+                                        <Span Text="Pots:" 
+                                              FontFamily="{StaticResource BoldFont}" 
+                                              FontSize="17"
+                                              TextColor="Black"/>
+                                    </FormattedString.Spans>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <StackLayout Orientation="Horizontal"
+                                     VerticalOptions="Start"
+                                     HorizontalOptions="Start">
+                            <Label FontSize="17">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <FormattedString.Spans>
+                                            <Span Text="&#x2705;" 
+                                                  FontFamily="{StaticResource NormalFont}" 
+                                                  FontSize="17"
+                                                  TextColor="Black"/>
+                                        </FormattedString.Spans>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Label FontSize="17">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <FormattedString.Spans>
+                                            <Span Text="Adquirir aliments i productes farmacèutics de primera necessitat." 
+                                                  FontFamily="{StaticResource NormalFont}" 
+                                                  FontSize="17"
+                                                  TextColor="Black"/>
+                                        </FormattedString.Spans>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal"
+                                     VerticalOptions="Start"
+                                     HorizontalOptions="Start">
+                            <Label FontSize="17">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <FormattedString.Spans>
+                                            <Span Text="&#x2705;" 
+                                                  FontFamily="{StaticResource NormalFont}" 
+                                                  FontSize="17"
+                                                  TextColor="Black"/>
+                                        </FormattedString.Spans>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Label FontSize="17">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <FormattedString.Spans>
+                                            <Span Text="Atendre i cuidar a persones vulnerables, mantenint una distància de 2 metres." 
+                                                  FontFamily="{StaticResource NormalFont}" 
+                                                  FontSize="17"
+                                                  TextColor="Black"/>
+                                        </FormattedString.Spans>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal"
+                                     VerticalOptions="Start"
+                                     HorizontalOptions="Start">
+                            <Label FontSize="17">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <FormattedString.Spans>
+                                            <Span Text="&#x2705;" 
+                                                  FontFamily="{StaticResource NormalFont}" 
+                                                  FontSize="17"
+                                                  TextColor="Black"/>
+                                        </FormattedString.Spans>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Label FontSize="17">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <FormattedString.Spans>
+                                            <Span Text="Treure a passejar la teva mascota pel temps mínim imprescindible." 
+                                                  FontFamily="{StaticResource NormalFont}" 
+                                                  FontSize="17"
+                                                  TextColor="Black"/>
+                                        </FormattedString.Spans>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical"
+                                 VerticalOptions="Start"
+                                 HorizontalOptions="Start"
+                                 Margin="0,40,0,0"
+                                 Spacing="10">
+                        <Label FontSize="17">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <FormattedString.Spans>
+                                        <Span Text="NO pots:" 
+                                              FontFamily="{StaticResource BoldFont}" 
+                                              FontSize="17"
+                                              TextColor="Black"/>
+                                    </FormattedString.Spans>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <StackLayout Orientation="Horizontal"
+                                     VerticalOptions="Start"
+                                     HorizontalOptions="Start">
+                            <Label FontSize="17">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <FormattedString.Spans>
+                                            <Span Text="&#x274C;" 
+                                                  FontFamily="{StaticResource NormalFont}" 
+                                                  FontSize="17"
+                                                  TextColor="Black"/>
+                                        </FormattedString.Spans>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Label FontSize="17">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <FormattedString.Spans>
+                                            <Span Text="Sortir acompanyat/da." 
+                                                  FontFamily="{StaticResource NormalFont}" 
+                                                  FontSize="17"
+                                                  TextColor="Black"/>
+                                        </FormattedString.Spans>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal"
+                                     VerticalOptions="Start"
+                                     HorizontalOptions="Start">
+                            <Label FontSize="17">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <FormattedString.Spans>
+                                            <Span Text="&#x274C;" 
+                                                  FontFamily="{StaticResource NormalFont}" 
+                                                  FontSize="17"
+                                                  TextColor="Black"/>
+                                        </FormattedString.Spans>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Label FontSize="17">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <FormattedString.Spans>
+                                            <Span Text="Desplaçar-te sense una causa justificada." 
+                                                  FontFamily="{StaticResource NormalFont}" 
+                                                  FontSize="17"
+                                                  TextColor="Black"/>
+                                        </FormattedString.Spans>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal"
+                                     VerticalOptions="Start"
+                                     HorizontalOptions="Start">
+                            <Label FontSize="17">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <FormattedString.Spans>
+                                            <Span Text="&#x274C;" 
+                                                  FontFamily="{StaticResource NormalFont}" 
+                                                  FontSize="17"
+                                                  TextColor="Black"/>
+                                        </FormattedString.Spans>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Label FontSize="17">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <FormattedString.Spans>
+                                            <Span Text="Anar a la teva segona residència." 
+                                                  FontFamily="{StaticResource NormalFont}" 
+                                                  FontSize="17"
+                                                  TextColor="Black"/>
+                                        </FormattedString.Spans>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Vertical"
+                                 HorizontalOptions="Center"
+                                 VerticalOptions="Center"
+                                 Margin="0,60,0,0">
+                        <Button WidthRequest="165"
+                                HeightRequest="40"
+                                Text="Més informació"
+                                Command="{Binding MesInformacioCommand, Mode=OneWay}"
+                                CommandParameter="https://web.gencat.cat/ca/coronavirus/"
+                                BackgroundColor="{StaticResource ButtonColor}"
+                                TextColor="{StaticResource Primary}"
+                                FontFamily="{StaticResource BoldFont}" />
+                    </StackLayout>
+                </StackLayout>
+
+            </ScrollView>
+        </Grid>
+    </ScrollView>
+</ContentPage>

@@ -1,4 +1,5 @@
-﻿using Android.App;
+﻿using Acr.UserDialogs;
+using Android.App;
 using Android.Content;
 using Android.Content.PM;
 using Android.Gms.Common;
@@ -12,7 +13,6 @@ namespace ConfinApp.Droid
     [Activity(Label = "NormalitApp", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
-        static readonly string TAG = "MainActivity";
         internal static readonly string CHANNEL_ID = "my_notification_channel";
         internal static readonly int NOTIFICATION_ID = 100;
 
@@ -28,13 +28,14 @@ namespace ConfinApp.Droid
             global::Xamarin.Forms.Forms.SetFlags("CollectionView_Experimental");
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            UserDialogs.Init(this);
 
             LoadApplication(new App());
 
-            if (IsPlayServiceAvailable() == false)
+            /*if (IsPlayServiceAvailable() == false)
             {
                 throw new Exception("This device does not have Google Play Services and cannot receive push notifications.");
-            }
+            }*/
 
             CreateNotificationChannel();
 
