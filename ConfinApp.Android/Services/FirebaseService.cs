@@ -5,11 +5,9 @@ using Android.Support.V4.App;
 using Android.Util;
 using Firebase.Messaging;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using WindowsAzure.Messaging;
 
-namespace ConfinApp.Droid
+namespace ConfinApp.Droid.Services
 {
     [Service]
     [IntentFilter(new[] { "com.google.firebase.MESSAGING_EVENT" })]

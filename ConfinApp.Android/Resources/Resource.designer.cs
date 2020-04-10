@@ -26,6 +26,7 @@ namespace ConfinApp.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::Microcharts.Droid.Resource.String.library_name = global::ConfinApp.Droid.Resource.String.library_name;
 			global::Xamarin.Essentials.Resource.Attribute.alpha = global::ConfinApp.Droid.Resource.Attribute.alpha;
 			global::Xamarin.Essentials.Resource.Attribute.coordinatorLayoutStyle = global::ConfinApp.Droid.Resource.Attribute.coordinatorLayoutStyle;
 			global::Xamarin.Essentials.Resource.Attribute.font = global::ConfinApp.Droid.Resource.Attribute.font;
@@ -7145,31 +7146,34 @@ namespace ConfinApp.Droid
 			public const int hide_bottom_view_on_scroll_behavior = 2131558472;
 			
 			// aapt resource value: 0x7F0D0049
-			public const int mtrl_chip_close_icon_content_description = 2131558473;
+			public const int library_name = 2131558473;
 			
 			// aapt resource value: 0x7F0D004A
-			public const int password_toggle_content_description = 2131558474;
+			public const int mtrl_chip_close_icon_content_description = 2131558474;
 			
 			// aapt resource value: 0x7F0D004B
-			public const int path_password_eye = 2131558475;
+			public const int password_toggle_content_description = 2131558475;
 			
 			// aapt resource value: 0x7F0D004C
-			public const int path_password_eye_mask_strike_through = 2131558476;
+			public const int path_password_eye = 2131558476;
 			
 			// aapt resource value: 0x7F0D004D
-			public const int path_password_eye_mask_visible = 2131558477;
+			public const int path_password_eye_mask_strike_through = 2131558477;
 			
 			// aapt resource value: 0x7F0D004E
-			public const int path_password_strike_through = 2131558478;
+			public const int path_password_eye_mask_visible = 2131558478;
 			
 			// aapt resource value: 0x7F0D004F
-			public const int project_id = 2131558479;
+			public const int path_password_strike_through = 2131558479;
 			
 			// aapt resource value: 0x7F0D0050
-			public const int search_menu_title = 2131558480;
+			public const int project_id = 2131558480;
 			
 			// aapt resource value: 0x7F0D0051
-			public const int status_bar_notification_info_overflow = 2131558481;
+			public const int search_menu_title = 2131558481;
+			
+			// aapt resource value: 0x7F0D0052
+			public const int status_bar_notification_info_overflow = 2131558482;
 			
 			static String()
 			{

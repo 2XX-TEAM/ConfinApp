@@ -115,7 +115,7 @@
                       Style="{StaticResource BaseStyle}"
                       Title="Evolució"
                       Icon="evolucio.png"
-                      ContentTemplate="{DataTemplate views:MossosPage}" />
+                      ContentTemplate="{DataTemplate views:EvolucioPage}" />
         <ShellContent Route="contacte"
                       Style="{StaticResource BaseStyle}"
                       Title="Contacte"

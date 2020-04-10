@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             x:Class="ConfinApp.Views.EvolucioPage"
+             Title="Evolució">
+
+    <ContentPage.Resources>
+            <Color x:Key="Primary">#FFFFFF</Color>
+            <Color x:Key="LightTextColor">#999999</Color>
+            <Color x:Key="ButtonColor">#FF0000</Color>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        
+        <StackLayout Margin="10,10,0,0"
+                     Orientation="Vertical">
+            <Label FontSize="17">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span Text="Darrera actualització: "
+                                  FontFamily="{StaticResource NormalFont}"
+                                  FontSize="17" />
+                            <Span x:Name="dataActualitzacio"
+                                  FontFamily="{StaticResource NormalFont}"
+                                  FontSize="17"/>
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <StackLayout Margin="40"
+                         Orientation="Horizontal"
+                         HorizontalOptions="Center">
+                <Label Text="Altes"
+                       FontFamily="{StaticResource BoldFont}"
+                       TextColor="#008000"/>
+                <Label Text="Casos"
+                       FontFamily="{StaticResource BoldFont}"
+                       TextColor="#FF0000"/>
+                <Label Text="Defuncions"
+                       FontFamily="{StaticResource BoldFont}"
+                       TextColor="#000000"/>
+            </StackLayout>
+
+            <Label Text="Setmana actual"
+                   FontFamily="{StaticResource BoldFont}" />
+            <microcharts:ChartView x:Name="chartViewAvui"
+                                       HeightRequest="250"/>
+            <Label Text="Setmana anterior"
+                   FontFamily="{StaticResource BoldFont}" />
+            <microcharts:ChartView x:Name="chartViewSetmana"
+                                       HeightRequest="250" />
+            <Label Text="Evolució altes"
+                   FontFamily="{StaticResource BoldFont}" />
+            <microcharts:ChartView x:Name="chartViewAltes"
+                                       HeightRequest="150"/>
+            <Label Text="Evolució nous casos"
+                   FontFamily="{StaticResource BoldFont}" />
+            <microcharts:ChartView x:Name="chartViewNousCasos"
+                                       HeightRequest="150"/>
+            <Label Text="Evolució defuncions"
+                   FontFamily="{StaticResource BoldFont}" />
+            <microcharts:ChartView x:Name="chartViewDefuncions"
+                                       HeightRequest="150"/>
+        </StackLayout>
+    </ScrollView>
+   
+</ContentPage>
