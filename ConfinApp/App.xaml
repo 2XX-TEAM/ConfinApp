@@ -4,12 +4,20 @@
         <ResourceDictionary>
             <Color x:Key="WhiteColor">White</Color>
 
-            <OnPlatform x:TypeArguments="x:String" x:Key="BoldFont">
+            <OnPlatform x:TypeArguments="x:String" x:Key="HelveticaBdFont">
                 <On Platform="Android" Value="HelveticaNeueBd.ttf#Helvetica Neue" />
                 <On Platform="iOS" Value="" />
             </OnPlatform>
-            <OnPlatform x:TypeArguments="x:String" x:Key="NormalFont">
+            <OnPlatform x:TypeArguments="x:String" x:Key="HelveticaLtFont">
+                <On Platform="Android" Value="HelveticaNeueLt.ttf#Helvetica Neue" />
+                <On Platform="iOS" Value="" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="HelveticaRegularFont">
                 <On Platform="Android" Value="HelveticaNeue.ttf#Helvetica Neue" />
+                <On Platform="iOS" Value="" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="HelveticaMdFont">
+                <On Platform="Android" Value="HelveticaNeueMed.ttf#Helvetica Neue" />
                 <On Platform="iOS" Value="" />
             </OnPlatform>
         </ResourceDictionary>

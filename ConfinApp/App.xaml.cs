@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using ConfinApp.Views;
+using Xamarin.Forms;
 
 namespace ConfinApp
 {
@@ -9,6 +10,7 @@ namespace ConfinApp
             InitializeComponent();
 
             MainPage = new AppShell();
+            //MainPage = new OnboardingPage(MainPage);
         }
 
         protected override void OnStart()

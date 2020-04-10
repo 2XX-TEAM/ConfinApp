@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ConfinApp.Views.OnboardingPage"
+             BackgroundColor="{StaticResource WhiteColor}">
+
+    <ContentPage.Resources>
+            <Color x:Key="Primary">#FFFFFF</Color>
+            <Color x:Key="LightTextColor">#999999</Color>
+            <Color x:Key="ButtonColor">#FF0000</Color>
+    </ContentPage.Resources>
+    
+    <ScrollView>
+        <StackLayout VerticalOptions="StartAndExpand"
+                     HorizontalOptions="FillAndExpand"
+                     Margin="20,60,20,0">
+                <Label FontSize="17"
+                       HorizontalTextAlignment="Center"
+                       TextColor="Black">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Si decideixes contestar les següents preguntes, podrem oferir-te contingut personalitzat. Si no, les pots ometre." 
+                                      FontFamily="{StaticResource HelveticaLtFont}"
+                                      FontSize="17" />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label FontSize="17"
+                       HorizontalTextAlignment="Center"
+                       TextColor="Black"
+                       Margin="0,20,0,0">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Fas esport habitualment?" 
+                                      FontFamily="{StaticResource HelveticaRegularFont}"
+                                      FontSize="17" />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <StackLayout Orientation="Horizontal"
+                             VerticalOptions="Center"
+                             HorizontalOptions="Center">
+                    <Button WidthRequest="88"
+                            HeightRequest="40"
+                            Text="SI"
+                            Command="{Binding EsportOKCommand, Mode=OneWay}"
+                            BackgroundColor="{StaticResource ButtonColor}"
+                            TextColor="{StaticResource Primary}"
+                            FontFamily="{StaticResource HelveticaMdFont}" />
+                    <Button WidthRequest="88"
+                            HeightRequest="40"
+                            Text="No"
+                            Command="{Binding EsportKOCommand, Mode=OneWay}"
+                            BackgroundColor="{StaticResource ButtonColor}"
+                            TextColor="{StaticResource Primary}"
+                            FontFamily="{StaticResource HelveticaMdFont}" />
+                </StackLayout>
+
+                <Label FontSize="17"
+                       HorizontalTextAlignment="Center"
+                       TextColor="Black"
+                       Margin="0,20,0,0">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="A dia d'avui, vius sol/a?" 
+                                      FontFamily="{StaticResource HelveticaRegularFont}"
+                                      FontSize="17" />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <StackLayout Orientation="Horizontal"
+                             VerticalOptions="Center"
+                             HorizontalOptions="Center">
+                    <Button WidthRequest="88"
+                            HeightRequest="40"
+                            Text="SI"
+                            Command="{Binding IndepOKCommand, Mode=OneWay}"
+                            BackgroundColor="{StaticResource ButtonColor}"
+                            TextColor="{StaticResource Primary}"
+                            FontFamily="{StaticResource HelveticaMdFont}" />
+                    <Button WidthRequest="88"
+                            HeightRequest="40"
+                            Text="No"
+                            Command="{Binding IndepKOCommand, Mode=OneWay}"
+                            BackgroundColor="{StaticResource ButtonColor}"
+                            TextColor="{StaticResource Primary}"
+                            FontFamily="{StaticResource HelveticaMdFont}" />
+                </StackLayout>
+
+            <StackLayout Orientation="Vertical"
+                         VerticalOptions="Center"
+                         HorizontalOptions="Center"
+                         Margin="0,50,0,0">
+                <Button WidthRequest="163"
+                            HeightRequest="40"
+                            Text="Continuar"
+                            Command="{Binding ContinuarCommand, Mode=OneWay}"
+                            BackgroundColor="{StaticResource ButtonColor}"
+                            TextColor="{StaticResource Primary}"
+                            FontFamily="{StaticResource HelveticaMdFont}" />
+                <Button WidthRequest="163"
+                            HeightRequest="40"
+                            Text="Ometre"
+                            Command="{Binding OmetreCommand, Mode=OneWay}"
+                            BackgroundColor="{StaticResource ButtonColor}"
+                            TextColor="{StaticResource Primary}"
+                            FontFamily="{StaticResource HelveticaMdFont}" />
+
+            </StackLayout>
+                
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -15,7 +15,7 @@
         <Style x:Key="BaseStyle"
                TargetType="Element">
             <Setter Property="Shell.BackgroundColor"
-                    Value="#455A64" />
+                    Value="#C00001" />
             <Setter Property="Shell.ForegroundColor"
                     Value="White" />
             <Setter Property="Shell.TitleColor"

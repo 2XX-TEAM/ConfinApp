@@ -25,7 +25,7 @@
                         <FormattedString>
                             <FormattedString.Spans>
                                 <Span Text="Estem amb tu." 
-                                      FontFamily="{StaticResource NormalFont}"
+                                      FontFamily="{StaticResource HelveticaLtFont}"
                                       FontSize="17"
                                       TextColor="Black"/>
                             </FormattedString.Spans>
@@ -46,7 +46,7 @@
                                 <FormattedString>
                                     <FormattedString.Spans>
                                         <Span Text="Tens una consulta general?" 
-                                              FontFamily="{StaticResource BoldFont}" 
+                                              FontFamily="{StaticResource HelveticaMdFont}" 
                                               FontSize="17"
                                               TextColor="Black"/>
                                     </FormattedString.Spans>
@@ -61,9 +61,9 @@
                                     Text="Truca 012 Informació" 
                                     Command="{Binding InformacioCommand, Mode=OneWay}"
                                     CommandParameter="tel:012"
-                                    BackgroundColor="{StaticResource ButtonColor}"
-                                    TextColor="{StaticResource Primary}"
-                                    FontFamily="{StaticResource BoldFont}" />
+                                    BackgroundColor="#D8D8D8"
+                                    TextColor="Black"
+                                    FontFamily="{StaticResource HelveticaMdFont}"/>
                         </StackLayout>
                     </StackLayout>
                     <StackLayout Orientation="Vertical"
@@ -75,7 +75,7 @@
                                 <FormattedString>
                                     <FormattedString.Spans>
                                         <Span Text="Tens una urgència per coronavirus o sanitària?" 
-                                              FontFamily="{StaticResource BoldFont}" 
+                                              FontFamily="{StaticResource HelveticaMdFont}" 
                                               FontSize="17"
                                               TextColor="Black"/>
                                     </FormattedString.Spans>
@@ -90,9 +90,9 @@
                                     Text="Truca 061 CatSalut" 
                                     Command="{Binding CatSalutCommand, Mode=OneWay}"
                                     CommandParameter="tel:061"
-                                    BackgroundColor="{StaticResource ButtonColor}"
-                                    TextColor="{StaticResource Primary}"
-                                    FontFamily="{StaticResource BoldFont}" />
+                                    BackgroundColor="#D8D8D8"
+                                    TextColor="Black"
+                                    FontFamily="{StaticResource HelveticaMdFont}"/>
                         </StackLayout>
                     </StackLayout>
                     <StackLayout Orientation="Vertical"
@@ -104,7 +104,7 @@
                                 <FormattedString>
                                     <FormattedString.Spans>
                                         <Span Text="Sospites d'un robatori al teu negoci o segona residència?" 
-                                              FontFamily="{StaticResource BoldFont}" 
+                                              FontFamily="{StaticResource HelveticaMdFont}" 
                                               FontSize="17"
                                               TextColor="Black"/>
                                     </FormattedString.Spans>
@@ -119,9 +119,9 @@
                                     Text="Truca 112 Mossos" 
                                     Command="{Binding MossosCommand, Mode=OneWay}"
                                     CommandParameter="tel:112"
-                                    BackgroundColor="{StaticResource ButtonColor}"
-                                    TextColor="{StaticResource Primary}"
-                                    FontFamily="{StaticResource BoldFont}" />
+                                    BackgroundColor="#D8D8D8"
+                                    TextColor="Black"
+                                    FontFamily="{StaticResource HelveticaMdFont}"/>
                         </StackLayout>
                     </StackLayout>
                     <StackLayout Orientation="Vertical"
@@ -133,7 +133,7 @@
                                 <FormattedString>
                                     <FormattedString.Spans>
                                         <Span Text="Pateixes alguna agressió?" 
-                                              FontFamily="{StaticResource BoldFont}" 
+                                              FontFamily="{StaticResource HelveticaMdFont}" 
                                               FontSize="17"
                                               TextColor="Black"/>
                                     </FormattedString.Spans>
@@ -148,17 +148,17 @@
                                     Text="Truca'ns" 
                                     Command="{Binding TrucansCommand, Mode=OneWay}"
                                     CommandParameter="tel:900900120"
-                                    BackgroundColor="{StaticResource ButtonColor}"
-                                    TextColor="{StaticResource Primary}"
-                                    FontFamily="{StaticResource BoldFont}" />
+                                    BackgroundColor="#D8D8D8"
+                                    TextColor="Black"
+                                    FontFamily="{StaticResource HelveticaMdFont}"/>
                             <Button WidthRequest="143"
                                     HeightRequest="40"
                                     Text="Escriu-nos" 
                                     Command="{Binding EscriunosCommand, Mode=OneWay}"
                                     CommandParameter="https://wa.me/+34671778540/?text="
-                                    BackgroundColor="{StaticResource ButtonColor}"
-                                    TextColor="{StaticResource Primary}"
-                                    FontFamily="{StaticResource BoldFont}" />
+                                    BackgroundColor="#D8D8D8"
+                                    TextColor="Black"
+                                    FontFamily="{StaticResource HelveticaMdFont}"/>
                         </StackLayout>
                     </StackLayout>
                     <StackLayout Orientation="Vertical"
@@ -170,7 +170,7 @@
                                 <FormattedString>
                                     <FormattedString.Spans>
                                         <Span Text="Tens una emergència?" 
-                                              FontFamily="{StaticResource BoldFont}" 
+                                              FontFamily="{StaticResource HelveticaMdFont}" 
                                               FontSize="17"
                                               TextColor="Black"/>
                                     </FormattedString.Spans>
@@ -185,9 +185,9 @@
                                     Text="Truca 112 Emergències" 
                                     Command="{Binding EmergenciesCommand, Mode=OneWay}"
                                     CommandParameter="tel:112"
-                                    BackgroundColor="{StaticResource ButtonColor}"
-                                    TextColor="{StaticResource Primary}"
-                                    FontFamily="{StaticResource BoldFont}" />
+                                    BackgroundColor="#D8D8D8"
+                                    TextColor="Black"
+                                    FontFamily="{StaticResource HelveticaMdFont}"/>
                         </StackLayout>
                     </StackLayout>
                     <StackLayout Orientation="Vertical"
@@ -198,11 +198,11 @@
                             <Label.FormattedText>
                                 <FormattedString>
                                     <FormattedString.Spans>
-                                        <Span FontFamily="{StaticResource NormalFont}" 
+                                        <Span FontFamily="{StaticResource HelveticaLtFont}" 
                                               FontSize="15"
                                               Text="Per a més informació consulta a: "
                                               TextColor="Black"/>
-                                        <Span FontFamily="{StaticResource NormalFont}" 
+                                        <Span FontFamily="{StaticResource HelveticaLtFont}" 
                                               FontSize="15"
                                               Text="www.gencat.cat"
                                               TextColor="Blue"
@@ -212,17 +212,17 @@
                                                                       CommandParameter="https://web.gencat.cat/ca/inici/" />
                                             </Span.GestureRecognizers>
                                         </Span>
-                                    <Span FontFamily="{StaticResource NormalFont}"
+                                    <Span FontFamily="{StaticResource HelveticaLtFont}"
                                           Text="."
-                                          TextColor="Black"/>
+                                          TextColor="Black"
+                                          FontSize="15"/>
                                 </FormattedString.Spans>
                                 </FormattedString>
                             </Label.FormattedText>
                         </Label>
                     </StackLayout>
                 </StackLayout>
-
             </ScrollView>
-        </Grid>
+         </Grid>
     </ScrollView>
 </ContentPage>

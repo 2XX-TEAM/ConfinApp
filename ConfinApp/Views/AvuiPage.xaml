@@ -26,11 +26,11 @@
                         <FormattedString>
                             <FormattedString.Spans>
                                 <Span Text="Avui " 
-                                      FontFamily="{StaticResource NormalFont}"
+                                      FontFamily="{StaticResource HelveticaLtFont}"
                                       FontSize="17"
                                       TextColor="Black"/>
                                 <Span x:Name="today"
-                                      FontFamily="{StaticResource NormalFont}"
+                                      FontFamily="{StaticResource HelveticaLtFont}"
                                       FontSize="17"
                                       TextColor="Black"/>
                             </FormattedString.Spans>
@@ -53,7 +53,7 @@
                                 <FormattedString>
                                     <FormattedString.Spans>
                                         <Span Text="Pots:" 
-                                              FontFamily="{StaticResource BoldFont}" 
+                                              FontFamily="{StaticResource HelveticaMdFont}" 
                                               FontSize="17"
                                               TextColor="Black"/>
                                     </FormattedString.Spans>
@@ -68,7 +68,7 @@
                                     <FormattedString>
                                         <FormattedString.Spans>
                                             <Span Text="&#x2705;" 
-                                                  FontFamily="{StaticResource NormalFont}" 
+                                                  FontFamily="{StaticResource HelveticaRegularFont}" 
                                                   FontSize="17"
                                                   TextColor="Black"/>
                                         </FormattedString.Spans>
@@ -79,8 +79,8 @@
                                 <Label.FormattedText>
                                     <FormattedString>
                                         <FormattedString.Spans>
-                                            <Span Text="Adquirir aliments i productes farmacèutics de primera necessitat." 
-                                                  FontFamily="{StaticResource NormalFont}" 
+                                            <Span Text="Anar a la farmàcia a recollir una mascareta amb la teva targeta sanitària." 
+                                                  FontFamily="{StaticResource HelveticaLtFont}" 
                                                   FontSize="17"
                                                   TextColor="Black"/>
                                         </FormattedString.Spans>
@@ -96,7 +96,7 @@
                                     <FormattedString>
                                         <FormattedString.Spans>
                                             <Span Text="&#x2705;" 
-                                                  FontFamily="{StaticResource NormalFont}" 
+                                                  FontFamily="{StaticResource HelveticaLtFont}" 
                                                   FontSize="17"
                                                   TextColor="Black"/>
                                         </FormattedString.Spans>
@@ -108,7 +108,7 @@
                                     <FormattedString>
                                         <FormattedString.Spans>
                                             <Span Text="Atendre i cuidar a persones vulnerables, mantenint una distància de 2 metres." 
-                                                  FontFamily="{StaticResource NormalFont}" 
+                                                  FontFamily="{StaticResource HelveticaLtFont}" 
                                                   FontSize="17"
                                                   TextColor="Black"/>
                                         </FormattedString.Spans>
@@ -124,7 +124,7 @@
                                     <FormattedString>
                                         <FormattedString.Spans>
                                             <Span Text="&#x2705;" 
-                                                  FontFamily="{StaticResource NormalFont}" 
+                                                  FontFamily="{StaticResource HelveticaLtFont}" 
                                                   FontSize="17"
                                                   TextColor="Black"/>
                                         </FormattedString.Spans>
@@ -136,7 +136,7 @@
                                     <FormattedString>
                                         <FormattedString.Spans>
                                             <Span Text="Treure a passejar la teva mascota pel temps mínim imprescindible." 
-                                                  FontFamily="{StaticResource NormalFont}" 
+                                                  FontFamily="{StaticResource HelveticaLtFont}" 
                                                   FontSize="17"
                                                   TextColor="Black"/>
                                         </FormattedString.Spans>
@@ -155,7 +155,7 @@
                                 <FormattedString>
                                     <FormattedString.Spans>
                                         <Span Text="NO pots:" 
-                                              FontFamily="{StaticResource BoldFont}" 
+                                              FontFamily="{StaticResource HelveticaMdFont}" 
                                               FontSize="17"
                                               TextColor="Black"/>
                                     </FormattedString.Spans>
@@ -170,7 +170,7 @@
                                     <FormattedString>
                                         <FormattedString.Spans>
                                             <Span Text="&#x274C;" 
-                                                  FontFamily="{StaticResource NormalFont}" 
+                                                  FontFamily="{StaticResource HelveticaLtFont}" 
                                                   FontSize="17"
                                                   TextColor="Black"/>
                                         </FormattedString.Spans>
@@ -182,7 +182,7 @@
                                     <FormattedString>
                                         <FormattedString.Spans>
                                             <Span Text="Sortir acompanyat/da." 
-                                                  FontFamily="{StaticResource NormalFont}" 
+                                                  FontFamily="{StaticResource HelveticaLtFont}" 
                                                   FontSize="17"
                                                   TextColor="Black"/>
                                         </FormattedString.Spans>
@@ -198,7 +198,7 @@
                                     <FormattedString>
                                         <FormattedString.Spans>
                                             <Span Text="&#x274C;" 
-                                                  FontFamily="{StaticResource NormalFont}" 
+                                                  FontFamily="{StaticResource HelveticaLtFont}" 
                                                   FontSize="17"
                                                   TextColor="Black"/>
                                         </FormattedString.Spans>
@@ -210,7 +210,7 @@
                                     <FormattedString>
                                         <FormattedString.Spans>
                                             <Span Text="Desplaçar-te sense una causa justificada." 
-                                                  FontFamily="{StaticResource NormalFont}" 
+                                                  FontFamily="{StaticResource HelveticaLtFont}" 
                                                   FontSize="17"
                                                   TextColor="Black"/>
                                         </FormattedString.Spans>
@@ -226,7 +226,7 @@
                                     <FormattedString>
                                         <FormattedString.Spans>
                                             <Span Text="&#x274C;" 
-                                                  FontFamily="{StaticResource NormalFont}" 
+                                                  FontFamily="{StaticResource HelveticaRegularFont}" 
                                                   FontSize="17"
                                                   TextColor="Black"/>
                                         </FormattedString.Spans>
@@ -238,7 +238,7 @@
                                     <FormattedString>
                                         <FormattedString.Spans>
                                             <Span Text="Anar a la teva segona residència." 
-                                                  FontFamily="{StaticResource NormalFont}" 
+                                                  FontFamily="{StaticResource HelveticaLtFont}" 
                                                   FontSize="17"
                                                   TextColor="Black"/>
                                         </FormattedString.Spans>
@@ -251,15 +251,15 @@
                     <StackLayout Orientation="Vertical"
                                  HorizontalOptions="Center"
                                  VerticalOptions="Center"
-                                 Margin="0,60,0,0">
+                                 Margin="0,60,0,20">
                         <Button WidthRequest="165"
                                 HeightRequest="40"
                                 Text="Més informació"
+                                FontFamily="{StaticResource HelveticaMdFont}"
                                 Command="{Binding MesInformacioCommand, Mode=OneWay}"
                                 CommandParameter="https://web.gencat.cat/ca/coronavirus/"
                                 BackgroundColor="{StaticResource ButtonColor}"
-                                TextColor="{StaticResource Primary}"
-                                FontFamily="{StaticResource BoldFont}" />
+                                TextColor="{StaticResource Primary}" />
                     </StackLayout>
                 </StackLayout>
 

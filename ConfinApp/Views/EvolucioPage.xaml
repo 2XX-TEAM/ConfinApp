@@ -22,11 +22,11 @@
                     <FormattedString>
                         <FormattedString.Spans>
                             <Span Text="Darrera actualització: "
-                                  FontFamily="{StaticResource NormalFont}"
+                                  FontFamily="{StaticResource HelveticaLtFont}"
                                   FontSize="17"
                                   TextColor="Black"/>
                             <Span x:Name="dataActualitzacio"
-                                  FontFamily="{StaticResource NormalFont}"
+                                  FontFamily="{StaticResource HelveticaLtFont}"
                                   FontSize="17"
                                   TextColor="Black"/>
                         </FormattedString.Spans>
@@ -37,45 +37,45 @@
                          Orientation="Horizontal"
                          HorizontalOptions="Center">
                 <Label Text="Altes"
-                       FontFamily="{StaticResource BoldFont}"
+                       FontFamily="{StaticResource HelveticaMdFont}"
                        TextColor="#008000"
                        FontSize="17"/>
                 <Label Text="Casos"
-                       FontFamily="{StaticResource BoldFont}"
+                       FontFamily="{StaticResource HelveticaMdFont}"
                        TextColor="#FF0000"
                        FontSize="17"/>
                 <Label Text="Defuncions"
-                       FontFamily="{StaticResource BoldFont}"
+                       FontFamily="{StaticResource HelveticaMdFont}"
                        TextColor="#000000"
                        FontSize="17"/>
             </StackLayout>
 
             <Label Text="Setmana actual"
-                   FontFamily="{StaticResource BoldFont}"
+                   FontFamily="{StaticResource HelveticaMdFont}"
                    TextColor="Black"
                    FontSize="17"/>
             <microcharts:ChartView x:Name="chartViewAvui"
                                    HeightRequest="250"/>
             <Label Text="Setmana anterior"
-                   FontFamily="{StaticResource BoldFont}"
+                   FontFamily="{StaticResource HelveticaMdFont}"
                    TextColor="Black"
                    FontSize="17"/>
             <microcharts:ChartView x:Name="chartViewSetmana"
                                    HeightRequest="250" />
             <Label Text="Evolució altes"
-                   FontFamily="{StaticResource BoldFont}"
+                   FontFamily="{StaticResource HelveticaMdFont}"
                    TextColor="Black"
                    FontSize="17"/>
             <microcharts:ChartView x:Name="chartViewAltes"
                                    HeightRequest="150"/>
             <Label Text="Evolució nous casos"
-                   FontFamily="{StaticResource BoldFont}"
+                   FontFamily="{StaticResource HelveticaMdFont}"
                    TextColor="Black"
                    FontSize="17"/>
             <microcharts:ChartView x:Name="chartViewNousCasos"
                                    HeightRequest="150"/>
             <Label Text="Evolució defuncions"
-                   FontFamily="{StaticResource BoldFont}"
+                   FontFamily="{StaticResource HelveticaMdFont}"
                    TextColor="Black"
                    FontSize="17"/>
             <microcharts:ChartView x:Name="chartViewDefuncions"
