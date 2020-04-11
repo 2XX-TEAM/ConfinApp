@@ -8,7 +8,6 @@ namespace ConfinApp.Views
         private ToolbarItem goBack;
         private static readonly string TWITTER_GENCAT = "https://mobile.twitter.com/gencat?lang=ca";
 
-
         public GencatPage()
         {
             Title = "Notícies";
@@ -27,23 +26,31 @@ namespace ConfinApp.Views
                 Children = { webView }
             };
 
-            goBack = new ToolbarItem("Enrere", null, () =>
+            goBack = new ToolbarItem("Torna", null, () =>
             {
                 webView.GoBack();
             });
-
         }
 
         private void WebView_Navigated(object sender, WebNavigatedEventArgs e)
         {
-            if (!e.Url.Equals(TWITTER_GENCAT))
+            if (e.Url.Equals(TWITTER_GENCAT))
             {
-                ToolbarItems.Add(goBack);
+                if (ToolbarItems.Count > 0)
+                {
+                    ToolbarItems.Remove(goBack);
+                }
             }
             else
             {
-                ToolbarItems.Remove(goBack);
-            }
+                if (ToolbarItems.Count == 0)
+                {
+                    if (ToolbarItems.Count == 0)
+                    {
+                        ToolbarItems.Add(goBack);
+                    }
+                }
+            }  
         }
     }
 }

@@ -14,7 +14,7 @@ namespace ConfinApp.Views
             InitializeComponent();
             BindingContext = this;
             
-            today.Text = DateTime.Now.ToShortDateString();
+            //today.Text = DateTime.Now.ToShortDateString();
         }
     }
 }

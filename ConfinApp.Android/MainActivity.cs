@@ -1,6 +1,5 @@
 ﻿using Acr.UserDialogs;
 using Android.App;
-using Android.Content;
 using Android.Content.PM;
 using Android.Gms.Common;
 using Android.OS;
@@ -10,13 +9,11 @@ using System;
 
 namespace ConfinApp.Droid
 {
-    [Activity(Label = "NormalitApp", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "NormalitApp", Icon = "@mipmap/icon", Theme = "@style/MainTheme", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         internal static readonly string CHANNEL_ID = "my_notification_channel";
         internal static readonly int NOTIFICATION_ID = 100;
-
-
 
         protected override void OnCreate(Bundle savedInstanceState)
         {

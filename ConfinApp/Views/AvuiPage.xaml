@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ConfinApp.Views.AvuiPage"
-             BackgroundColor="{StaticResource WhiteColor}"
+             BackgroundColor="{StaticResource ContentPageBackgroundColor}"
              Title="Avui">
 
     <ContentPage.Resources>
@@ -17,15 +17,14 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            <StackLayout BackgroundColor="{StaticResource Primary}" 
-                         VerticalOptions="Start" 
+            <StackLayout VerticalOptions="Start" 
                          HorizontalOptions="Start"
-                         Padding="20,20,0,0">
+                         Margin="10,10,0,0">
                 <Label FontSize="17">
                     <Label.FormattedText>
                         <FormattedString>
                             <FormattedString.Spans>
-                                <Span Text="Avui " 
+                                <Span Text="Bon dia, avui dissabte 11 d'Abril:" 
                                       FontFamily="{StaticResource HelveticaLtFont}"
                                       FontSize="17"
                                       TextColor="Black"/>
@@ -39,9 +38,8 @@
                 </Label>
             </StackLayout>
             <ScrollView Grid.Row="1">
-                <StackLayout BackgroundColor="{StaticResource Primary}" 
-                             Orientation="Vertical" 
-                             Padding="20,10,20,0"
+                <StackLayout Orientation="Vertical" 
+                             Margin="10,10,10,0"
                              Spacing="1">
                     <StackLayout Orientation="Vertical"
                                  VerticalOptions="Start"
@@ -67,7 +65,7 @@
                                 <Label.FormattedText>
                                     <FormattedString>
                                         <FormattedString.Spans>
-                                            <Span Text="&#x2705;" 
+                                            <Span Text="&#x2705;  "
                                                   FontFamily="{StaticResource HelveticaRegularFont}" 
                                                   FontSize="17"
                                                   TextColor="Black"/>
@@ -95,7 +93,7 @@
                                 <Label.FormattedText>
                                     <FormattedString>
                                         <FormattedString.Spans>
-                                            <Span Text="&#x2705;" 
+                                            <Span Text="&#x2705;  " 
                                                   FontFamily="{StaticResource HelveticaLtFont}" 
                                                   FontSize="17"
                                                   TextColor="Black"/>
@@ -123,7 +121,7 @@
                                 <Label.FormattedText>
                                     <FormattedString>
                                         <FormattedString.Spans>
-                                            <Span Text="&#x2705;" 
+                                            <Span Text="&#x2705;  " 
                                                   FontFamily="{StaticResource HelveticaLtFont}" 
                                                   FontSize="17"
                                                   TextColor="Black"/>
@@ -149,7 +147,7 @@
                                  VerticalOptions="Start"
                                  HorizontalOptions="Start"
                                  Margin="0,40,0,0"
-                                 Spacing="10">
+                                 Spacing="20">
                         <Label FontSize="17">
                             <Label.FormattedText>
                                 <FormattedString>
@@ -169,7 +167,7 @@
                                 <Label.FormattedText>
                                     <FormattedString>
                                         <FormattedString.Spans>
-                                            <Span Text="&#x274C;" 
+                                            <Span Text="&#x274C; " 
                                                   FontFamily="{StaticResource HelveticaLtFont}" 
                                                   FontSize="17"
                                                   TextColor="Black"/>
@@ -197,7 +195,7 @@
                                 <Label.FormattedText>
                                     <FormattedString>
                                         <FormattedString.Spans>
-                                            <Span Text="&#x274C;" 
+                                            <Span Text="&#x274C; " 
                                                   FontFamily="{StaticResource HelveticaLtFont}" 
                                                   FontSize="17"
                                                   TextColor="Black"/>
@@ -225,7 +223,7 @@
                                 <Label.FormattedText>
                                     <FormattedString>
                                         <FormattedString.Spans>
-                                            <Span Text="&#x274C;" 
+                                            <Span Text="&#x274C; " 
                                                   FontFamily="{StaticResource HelveticaRegularFont}" 
                                                   FontSize="17"
                                                   TextColor="Black"/>
@@ -251,15 +249,15 @@
                     <StackLayout Orientation="Vertical"
                                  HorizontalOptions="Center"
                                  VerticalOptions="Center"
-                                 Margin="0,60,0,20">
+                                 Margin="0,40,0,0">
                         <Button WidthRequest="165"
                                 HeightRequest="40"
                                 Text="Més informació"
                                 FontFamily="{StaticResource HelveticaMdFont}"
                                 Command="{Binding MesInformacioCommand, Mode=OneWay}"
                                 CommandParameter="https://web.gencat.cat/ca/coronavirus/"
-                                BackgroundColor="{StaticResource ButtonColor}"
-                                TextColor="{StaticResource Primary}" />
+                                BackgroundColor="{StaticResource ButtonPrimaryColor}"
+                                TextColor="Black" />
                     </StackLayout>
                 </StackLayout>
 

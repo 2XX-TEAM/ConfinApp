@@ -59,7 +59,7 @@ namespace ConfinApp.Droid.Services
 
             var notificationBuilder = new NotificationCompat.Builder(this, AppConstants.NotificationChannelName)
                 .SetContentTitle(title)
-                .SetSmallIcon(Resource.Drawable.ic_launcher)
+                .SetSmallIcon(Resource.Drawable.icon)
                 .SetContentText(body)
                 .SetAutoCancel(true)
                 .SetShowWhen(false)

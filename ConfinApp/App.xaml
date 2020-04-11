@@ -3,6 +3,13 @@
     <Application.Resources>
         <ResourceDictionary>
             <Color x:Key="WhiteColor">White</Color>
+            <Color x:Key="ContentPageBackgroundColor">#F7F7F7</Color>
+            <Color x:Key="ButtonPrimaryColor">#CAC6D4</Color>
+            <Color x:Key="ButtonSOSColor">#C00001</Color>
+            <Color x:Key="AltesColor">#6A40D4</Color>
+            <Color x:Key="CasosColor">#A794D4</Color>
+            <Color x:Key="DefuncionsColor">#CAC6D4</Color>
+            <Color x:Key="ButtonContactaColor">#D8D8D8</Color>
 
             <OnPlatform x:TypeArguments="x:String" x:Key="HelveticaBdFont">
                 <On Platform="Android" Value="HelveticaNeueBd.ttf#Helvetica Neue" />

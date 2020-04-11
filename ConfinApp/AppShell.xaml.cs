@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using ConfinApp.Models;
-using ConfinApp.Services;
 using ConfinApp.Views;
 using Xamarin.Forms;
 
@@ -15,8 +13,10 @@ namespace ConfinApp
         public AppShell()
         {
             InitializeComponent();
+
+            Routing.RegisterRoute("onboarding", typeof(OnboardingPage));
+
             BindingContext = this;
-            
         }
 
         void OnNavigating(object sender, ShellNavigatingEventArgs e)

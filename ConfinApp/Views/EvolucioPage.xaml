@@ -3,18 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
              x:Class="ConfinApp.Views.EvolucioPage"
-             BackgroundColor="{StaticResource WhiteColor}"
+             BackgroundColor="{StaticResource ContentPageBackgroundColor}"
              Title="Evolució">
 
-    <ContentPage.Resources>
-            <Color x:Key="Primary">#FFFFFF</Color>
-            <Color x:Key="LightTextColor">#999999</Color>
-            <Color x:Key="ButtonColor">#FF0000</Color>
-    </ContentPage.Resources>
-
-
-    <ScrollView>
-        
+    <ScrollView>    
         <StackLayout Margin="10,10,0,0"
                      Orientation="Vertical">
             <Label FontSize="17">
@@ -36,18 +28,42 @@
             <StackLayout Margin="40"
                          Orientation="Horizontal"
                          HorizontalOptions="Center">
-                <Label Text="Altes"
-                       FontFamily="{StaticResource HelveticaMdFont}"
-                       TextColor="#008000"
-                       FontSize="17"/>
-                <Label Text="Casos"
-                       FontFamily="{StaticResource HelveticaMdFont}"
-                       TextColor="#FF0000"
-                       FontSize="17"/>
-                <Label Text="Defuncions"
-                       FontFamily="{StaticResource HelveticaMdFont}"
-                       TextColor="#000000"
-                       FontSize="17"/>
+                <StackLayout Orientation="Vertical"
+                             HorizontalOptions="Center"
+                             WidthRequest="80">
+                    <Label Text="Altes"
+                           FontFamily="{StaticResource HelveticaMdFont}"
+                           TextColor="{StaticResource AltesColor}"
+                           FontSize="17"/>
+                    <Label Text="13.513"
+                           FontFamily="{StaticResource HelveticaMdFont}"
+                           TextColor="Black"
+                           FontSize="17"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical"
+                             HorizontalOptions="Center"
+                             WidthRequest="80">
+                    <Label Text="Casos"
+                           FontFamily="{StaticResource HelveticaMdFont}"
+                           TextColor="{StaticResource CasosColor}"
+                           FontSize="17"/>
+                    <Label Text="31.727"
+                           FontFamily="{StaticResource HelveticaMdFont}"
+                           TextColor="Black"
+                           FontSize="17"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical"
+                             HorizontalOptions="Center">
+                    <Label Text="Defuncions"
+                           FontFamily="{StaticResource HelveticaMdFont}"
+                           TextColor="{StaticResource DefuncionsColor}"
+                           FontSize="17"/>
+                    <Label Text="3.231"
+                           FontFamily="{StaticResource HelveticaMdFont}"
+                           TextColor="Black"
+                           FontSize="17"/>
+                </StackLayout>
+                
             </StackLayout>
 
             <Label Text="Setmana actual"
@@ -55,31 +71,46 @@
                    TextColor="Black"
                    FontSize="17"/>
             <microcharts:ChartView x:Name="chartViewAvui"
-                                   HeightRequest="250"/>
-            <Label Text="Setmana anterior"
+                                   HeightRequest="250"
+                                   BackgroundColor="{StaticResource ContentPageBackgroundColor}"/>
+            <Label Text="Dades globals fins el dia 09/04"
+                   Margin="0,0,0,10"/>
+            <Label Text="Setmana passada"
                    FontFamily="{StaticResource HelveticaMdFont}"
                    TextColor="Black"
                    FontSize="17"/>
             <microcharts:ChartView x:Name="chartViewSetmana"
-                                   HeightRequest="250" />
+                                   HeightRequest="250"
+                                   BackgroundColor="{StaticResource ContentPageBackgroundColor}"/>
+            <Label Text="Dades globals fins el dia 01/04"
+                   Margin="0,0,0,10"/>
             <Label Text="Evolució altes"
                    FontFamily="{StaticResource HelveticaMdFont}"
                    TextColor="Black"
                    FontSize="17"/>
             <microcharts:ChartView x:Name="chartViewAltes"
-                                   HeightRequest="150"/>
+                                   HeightRequest="150"
+                                   BackgroundColor="{StaticResource ContentPageBackgroundColor}"/>
+            <Label Text="Dades recollides entre el 15/03 i el 09/04"
+                   Margin="0,0,0,10"/>
             <Label Text="Evolució nous casos"
                    FontFamily="{StaticResource HelveticaMdFont}"
                    TextColor="Black"
                    FontSize="17"/>
             <microcharts:ChartView x:Name="chartViewNousCasos"
-                                   HeightRequest="150"/>
+                                   HeightRequest="150"
+                                   BackgroundColor="{StaticResource ContentPageBackgroundColor}"/>
+            <Label Text="Dades recollides entre el 15/03 i el 09/04"
+                   Margin="0,0,0,10"/>
             <Label Text="Evolució defuncions"
                    FontFamily="{StaticResource HelveticaMdFont}"
                    TextColor="Black"
                    FontSize="17"/>
             <microcharts:ChartView x:Name="chartViewDefuncions"
-                                   HeightRequest="150"/>
+                                   HeightRequest="150"
+                                   BackgroundColor="{StaticResource ContentPageBackgroundColor}"/>
+            <Label Text="Dades recollides entre el 15/03 i el 09/04"
+                   Margin="0,0,0,10"/>
         </StackLayout>
     </ScrollView>
 </ContentPage>

@@ -1,31 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Windows.Input;
+﻿using ConfinApp.ViewModels;
+using Splat;
 using Xamarin.Forms;
 
 namespace ConfinApp.Views
 {
     public partial class OnboardingPage : ContentPage
     {
-        private Page mainPage;
-
-        private Command _ometreCommand;
-        public ICommand OmetreCommand
-        {
-            get { return _ometreCommand = _ometreCommand ?? new Command(ExecuteOmetreCommand); }
-        }
-
-        public OnboardingPage(Page MainPage)
+        public OnboardingPage()
         {
             InitializeComponent();
-            BindingContext = this;
-
-            this.mainPage = MainPage;
+            BindingContext = ViewModel;
         }
 
-        private async void ExecuteOmetreCommand()
+        internal OnboardingViewModel ViewModel { get; set; } = Locator.Current.GetService<OnboardingViewModel>();
+
+        protected override bool OnBackButtonPressed()
         {
-            //await Navigation.PushAsync(new AppShell());
+            return true;
         }
     }
 }

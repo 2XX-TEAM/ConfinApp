@@ -15,24 +15,27 @@
         <Style x:Key="BaseStyle"
                TargetType="Element">
             <Setter Property="Shell.BackgroundColor"
-                    Value="#C00001" />
-            <Setter Property="Shell.ForegroundColor"
                     Value="White" />
             <Setter Property="Shell.TitleColor"
-                    Value="White" />
+                    Value="Black" />
             <Setter Property="Shell.DisabledColor"
-                    Value="#B4FFFFFF" />
+                    Value="Black" />
             <Setter Property="Shell.UnselectedColor"
-                    Value="#95FFFFFF" />
+                    Value="#CAC6D4" />
+            <Setter Property="Shell.ForegroundColor"
+                    Value="Black" />
         </Style>
     </Shell.Resources>
 
 
+    <ShellContent Route="onboarding"
+                  ContentTemplate="{DataTemplate views:OnboardingPage}">
+    </ShellContent>
 
-
-    <TabBar>
+    <TabBar Route="main">
         <Tab Title="Avui"
-             Icon="avui.png">
+             Icon="avui.png"
+             Route="avui">
             <ShellContent Route="avui"
                           Style="{StaticResource BaseStyle}"
                           ContentTemplate="{DataTemplate views:AvuiPage}"/>
@@ -68,146 +71,4 @@
             
     </TabBar>
 
-
-
-    <!--<FlyoutItem Route="informacio"
-                Title="Informacio"
-                FlyoutDisplayOptions="AsMultipleItems">
-
-        <ShellContent Route="avui"
-                      Style="{StaticResource BaseStyle}"
-                      Title="Avui"
-                      Icon="avui.png"
-                      ContentTemplate="{DataTemplate views:AvuiPage}"/>
-
-        <Tab Title="Notícies"
-             Route="noticies"
-             Icon="noticies.png">
-            <ShellContent Route="gencat"
-                          Style="{StaticResource BaseStyle}"
-                          Title="GENCAT"
-                          ContentTemplate="{DataTemplate views:GencatPage}"/>
-            <ShellContent Route="salut"
-                          Style="{StaticResource BaseStyle}"
-                          Title="SALUT"
-                          ContentTemplate="{DataTemplate views:SalutPage}"/>
-            <ShellContent Route="mossos"
-                          Style="{StaticResource BaseStyle}"
-                          Title="MOSSOS"
-                          ContentTemplate="{DataTemplate views:MossosPage}"/>
-
-
-        </Tab>
-
-        <ShellContent Route="evolucio"
-                      Style="{StaticResource BaseStyle}"
-                      Title="Evolució"
-                      Icon="evolucio.png"
-                      ContentTemplate="{DataTemplate views:EvolucioPage}" />
-        <ShellContent Route="contacte"
-                      Style="{StaticResource BaseStyle}"
-                      Title="Contacte"
-                      Icon="contacte.png"
-                      ContentTemplate="{DataTemplate views:ContactePage}" />
-    </FlyoutItem>-->
-
-
-
-
-    <!-- Template for FlyoutHeader -->
-    <!--<Shell.FlyoutHeaderTemplate>
-        <DataTemplate>
-            <Grid BackgroundColor="Black"
-                    HeightRequest="200">
-                <Image Aspect="AspectFill"
-                       Source="xamarinstore.jpg"
-                       Opacity="0.6" />
-                <Label Text="Animals" 
-                        TextColor="White"
-                        FontFamily="{StaticResource BoldFont}"
-                        HorizontalTextAlignment="Center"
-                        VerticalTextAlignment="Center" />
-            </Grid>            
-        </DataTemplate>
-    </Shell.FlyoutHeaderTemplate>-->
-
-    <!-- Template each FlyoutItem -->
-    <!--<Shell.ItemTemplate>
-        <DataTemplate>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.2*" />
-                    <ColumnDefinition Width="0.8*" />
-                </Grid.ColumnDefinitions>
-                <Image Source="{Binding Icon}"
-                       Margin="5"
-                       HeightRequest="45" />
-                <Label Grid.Column="1"
-                       Text="{Binding Title}"
-                       FontFamily="{StaticResource NormalFont}"
-                       VerticalTextAlignment="Center" /> 
-            </Grid>
-        </DataTemplate>
-    </Shell.ItemTemplate>-->
-
-    <!-- Template each MenuItem -->
-    <!--<Shell.MenuItemTemplate>
-        <DataTemplate>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.2*" />
-                    <ColumnDefinition Width="0.8*" />
-                </Grid.ColumnDefinitions>
-                <Image Source="{Binding Icon}"
-                       Margin="5"
-                       HeightRequest="45" />
-                <Label Grid.Column="1"
-                       Text="{Binding Text}"
-                       FontFamily="{StaticResource NormalFont}"
-                       VerticalTextAlignment="Center" /> 
-            </Grid>
-        </DataTemplate>
-    </Shell.MenuItemTemplate>-->
-
-
-    <!--<FlyoutItem Route="informacio"
-                Title="Informacio"
-                FlyoutDisplayOptions="AsMultipleItems">
-
-        <ShellContent Route="avui"
-                      Style="{StaticResource BaseStyle}"
-                      Title="Avui"
-                      Icon="avui.png"
-                      ContentTemplate="{DataTemplate views:AvuiPage}"/>
-
-        <Tab Title="Notícies"
-             Route="noticies"
-             Icon="noticies.png">
-            <ShellContent Route="gencat"
-                          Style="{StaticResource BaseStyle}"
-                          Title="GENCAT"
-                          ContentTemplate="{DataTemplate views:GencatPage}"/>
-            <ShellContent Route="salut"
-                          Style="{StaticResource BaseStyle}"
-                          Title="SALUT"
-                          ContentTemplate="{DataTemplate views:SalutPage}"/>
-            <ShellContent Route="mossos"
-                          Style="{StaticResource BaseStyle}"
-                          Title="MOSSOS"
-                          ContentTemplate="{DataTemplate views:MossosPage}"/>
-
-
-        </Tab>
-
-        <ShellContent Route="evolucio"
-                      Style="{StaticResource BaseStyle}"
-                      Title="Evolució"
-                      Icon="evolucio.png"
-                      ContentTemplate="{DataTemplate views:EvolucioPage}" />
-        <ShellContent Route="contacte"
-                      Style="{StaticResource BaseStyle}"
-                      Title="Contacte"
-                      Icon="contacte.png"
-                      ContentTemplate="{DataTemplate views:ContactePage}" />
-    </FlyoutItem>-->
 </Shell>

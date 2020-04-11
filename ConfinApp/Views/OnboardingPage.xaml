@@ -2,20 +2,22 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ConfinApp.Views.OnboardingPage"
-             BackgroundColor="{StaticResource WhiteColor}">
+             BackgroundColor="{StaticResource WhiteColor}"
+             Shell.NavBarIsVisible="False"
+             Shell.FlyoutBehavior="Disabled"
+             Shell.TabBarIsVisible="False">
 
     <ContentPage.Resources>
             <Color x:Key="Primary">#FFFFFF</Color>
-            <Color x:Key="LightTextColor">#999999</Color>
-            <Color x:Key="ButtonColor">#FF0000</Color>
+            <Color x:Key="ButtonColor">#C8C8C8</Color>
     </ContentPage.Resources>
     
     <ScrollView>
         <StackLayout VerticalOptions="StartAndExpand"
-                     HorizontalOptions="FillAndExpand"
-                     Margin="20,60,20,0">
+                     HorizontalOptions="StartAndExpand"
+                     Margin="40,90,20,0">
                 <Label FontSize="17"
-                       HorizontalTextAlignment="Center"
+                       HorizontalTextAlignment="Start"
                        TextColor="Black">
                     <Label.FormattedText>
                         <FormattedString>
@@ -28,47 +30,50 @@
                     </Label.FormattedText>
                 </Label>
                 <Label FontSize="17"
-                       HorizontalTextAlignment="Center"
+                       HorizontalTextAlignment="Start"
                        TextColor="Black"
                        Margin="0,20,0,0">
                     <Label.FormattedText>
                         <FormattedString>
                             <FormattedString.Spans>
                                 <Span Text="Fas esport habitualment?" 
-                                      FontFamily="{StaticResource HelveticaRegularFont}"
+                                      FontFamily="{StaticResource HelveticaMdFont}"
                                       FontSize="17" />
                             </FormattedString.Spans>
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
                 <StackLayout Orientation="Horizontal"
-                             VerticalOptions="Center"
-                             HorizontalOptions="Center">
-                    <Button WidthRequest="88"
+                             VerticalOptions="StartAndExpand"
+                             HorizontalOptions="StartAndExpand">
+                    <Button x:Name="btnEsportOK"
+                            WidthRequest="88"
                             HeightRequest="40"
                             Text="SI"
-                            Command="{Binding EsportOKCommand, Mode=OneWay}"
-                            BackgroundColor="{StaticResource ButtonColor}"
-                            TextColor="{StaticResource Primary}"
-                            FontFamily="{StaticResource HelveticaMdFont}" />
-                    <Button WidthRequest="88"
+                            Command="{Binding ExecuteEsportOK}"
+                            BackgroundColor="{Binding BtnEsportOKColor}"
+                            TextColor="White"
+                            FontFamily="{StaticResource HelveticaMdFont}"
+                            Margin="0,0,40,0"/>
+                    <Button x:Name="btnEsportKO"
+                            WidthRequest="88"
                             HeightRequest="40"
                             Text="No"
-                            Command="{Binding EsportKOCommand, Mode=OneWay}"
-                            BackgroundColor="{StaticResource ButtonColor}"
-                            TextColor="{StaticResource Primary}"
+                            Command="{Binding ExecuteEsportKO}"
+                            BackgroundColor="{Binding BtnEsportKOColor}"
+                            TextColor="White"
                             FontFamily="{StaticResource HelveticaMdFont}" />
                 </StackLayout>
 
                 <Label FontSize="17"
-                       HorizontalTextAlignment="Center"
+                       HorizontalTextAlignment="Start"
                        TextColor="Black"
                        Margin="0,20,0,0">
                     <Label.FormattedText>
                         <FormattedString>
                             <FormattedString.Spans>
                                 <Span Text="A dia d'avui, vius sol/a?" 
-                                      FontFamily="{StaticResource HelveticaRegularFont}"
+                                      FontFamily="{StaticResource HelveticaMdFont}"
                                       FontSize="17" />
                             </FormattedString.Spans>
                         </FormattedString>
@@ -76,45 +81,49 @@
                 </Label>
                 <StackLayout Orientation="Horizontal"
                              VerticalOptions="Center"
-                             HorizontalOptions="Center">
-                    <Button WidthRequest="88"
+                             HorizontalOptions="StartAndExpand">
+                    <Button x:Name="btnIndepOK"
+                            WidthRequest="88"
                             HeightRequest="40"
                             Text="SI"
-                            Command="{Binding IndepOKCommand, Mode=OneWay}"
-                            BackgroundColor="{StaticResource ButtonColor}"
-                            TextColor="{StaticResource Primary}"
-                            FontFamily="{StaticResource HelveticaMdFont}" />
-                    <Button WidthRequest="88"
+                            Command="{Binding ExecuteIndepOK}"
+                            BackgroundColor="{Binding BtnIndepOKColor}"
+                            TextColor="White"
+                            FontFamily="{StaticResource HelveticaMdFont}"
+                            Margin="0,0,40,0"/>
+                    <Button x:Name="btnIndepKO"
+                            WidthRequest="88"
                             HeightRequest="40"
                             Text="No"
-                            Command="{Binding IndepKOCommand, Mode=OneWay}"
-                            BackgroundColor="{StaticResource ButtonColor}"
-                            TextColor="{StaticResource Primary}"
+                            Command="{Binding ExecuteIndepKO}"
+                            BackgroundColor="{Binding BtnIndepKOColor}"
+                            TextColor="White"
                             FontFamily="{StaticResource HelveticaMdFont}" />
                 </StackLayout>
 
             <StackLayout Orientation="Vertical"
                          VerticalOptions="Center"
                          HorizontalOptions="Center"
-                         Margin="0,50,0,0">
-                <Button WidthRequest="163"
-                            HeightRequest="40"
-                            Text="Continuar"
-                            Command="{Binding ContinuarCommand, Mode=OneWay}"
-                            BackgroundColor="{StaticResource ButtonColor}"
-                            TextColor="{StaticResource Primary}"
-                            FontFamily="{StaticResource HelveticaMdFont}" />
-                <Button WidthRequest="163"
-                            HeightRequest="40"
-                            Text="Ometre"
-                            Command="{Binding OmetreCommand, Mode=OneWay}"
-                            BackgroundColor="{StaticResource ButtonColor}"
-                            TextColor="{StaticResource Primary}"
-                            FontFamily="{StaticResource HelveticaMdFont}" />
+                         Margin="0,80,0,0">
+                <Button x:Name="btnContinuar"
+                        WidthRequest="163"
+                        HeightRequest="40"
+                        Text="Continuar"
+                        Command="{Binding ExecuteContinuar}"
+                        BackgroundColor="{StaticResource ButtonSOSColor}"
+                        TextColor="White"
+                        FontFamily="{StaticResource HelveticaMdFont}" />
+                <Button x:Name="btnOmetre"
+                        WidthRequest="163"
+                        HeightRequest="40"
+                        Margin="0,20"
+                        Text="Ometre"
+                        Command="{Binding ExecuteOmetre}"
+                        BackgroundColor="#DD7677"
+                        TextColor="White"
+                        FontFamily="{StaticResource HelveticaMdFont}" />
 
             </StackLayout>
-                
-
         </StackLayout>
     </ScrollView>
 </ContentPage>

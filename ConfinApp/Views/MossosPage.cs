@@ -26,7 +26,7 @@ namespace ConfinApp.Views
                 Children = { webView }
             };
 
-            goBack = new ToolbarItem("Enrere", null, () =>
+            goBack = new ToolbarItem("Torna", null, () =>
             {
                 webView.GoBack();
             });
@@ -35,13 +35,22 @@ namespace ConfinApp.Views
 
         private void WebView_Navigated(object sender, WebNavigatedEventArgs e)
         {
-            if (!e.Url.Equals(TWITTER_MOSSOS))
+            if (e.Url.Equals(TWITTER_MOSSOS))
             {
-                ToolbarItems.Add(goBack);
+                if (ToolbarItems.Count > 0)
+                {
+                    ToolbarItems.Remove(goBack);
+                }
             }
             else
             {
-                ToolbarItems.Remove(goBack);
+                if (ToolbarItems.Count == 0)
+                {
+                    if (ToolbarItems.Count == 0)
+                    {
+                        ToolbarItems.Add(goBack);
+                    }
+                }
             }
         }
     }

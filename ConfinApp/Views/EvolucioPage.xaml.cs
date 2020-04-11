@@ -41,21 +41,21 @@ namespace ConfinApp.Views
                 {
                     entry = new Microcharts.Entry(Int32.Parse(data.Defuncions))
                     {
-                        Color = SKColor.Parse("#000000")
+                        Color = SKColor.Parse("#CAC6D4")
                     };
 
                     defuncionsEntries.Add(entry);
 
                     entry = new Microcharts.Entry(Int32.Parse(data.Altes == null ? "0" : data.Altes))
                     {
-                        Color = SKColor.Parse("#008000")
+                        Color = SKColor.Parse("#6A40D4")
                     };
 
                     altesEntries.Add(entry);
 
                     entry = new Microcharts.Entry(Int32.Parse(data.Casos))
                     {
-                        Color = SKColor.Parse("#FF0000")
+                        Color = SKColor.Parse("#A794D4")
                     };
 
                     nousCasosEntries.Add(entry);
@@ -69,6 +69,7 @@ namespace ConfinApp.Views
                     PointMode = PointMode.None,
                     PointSize = 20,
                 };
+                this.chartViewAltes.Chart.BackgroundColor = SKColor.Parse("#F7F7F7");
 
                 this.chartViewNousCasos.Chart = new LineChart()
                 {
@@ -78,6 +79,7 @@ namespace ConfinApp.Views
                     PointMode = PointMode.None,
                     PointSize = 20
                 };
+                this.chartViewNousCasos.Chart.BackgroundColor = SKColor.Parse("#F7F7F7");
 
                 this.chartViewDefuncions.Chart = new LineChart()
                 {
@@ -87,23 +89,24 @@ namespace ConfinApp.Views
                     PointMode = PointMode.None,
                     PointSize = 20
                 };
+                this.chartViewDefuncions.Chart.BackgroundColor = SKColor.Parse("#F7F7F7");
 
 
                 COVID19_Cat avui = covidCatData[covidCatData.Count - 1];
-                dataActualitzacio.Text = avui.Data.ToShortDateString();
+                dataActualitzacio.Text = avui.Data.ToString("dd/MM");
                 List<Microcharts.Entry> avuiEntries = new List<Microcharts.Entry>
                 {
                     new Microcharts.Entry(Int32.Parse(avui.Total_Defuncions == null ? "0" : avui.Total_Defuncions))
                     {
-                        Color = SKColor.Parse("#000000"),
+                        Color = SKColor.Parse("#CAC6D4"),
                     },
                     new Microcharts.Entry(Int32.Parse(avui.Total_Altes == null ? "0" : avui.Total_Altes))
                     {
-                        Color = SKColor.Parse("#008000"),
+                        Color = SKColor.Parse("#6A40D4"),
                     },
                     new Microcharts.Entry(Int32.Parse(avui.Total_Casos == null ? "0" : avui.Total_Casos))
                     {
-                        Color = SKColor.Parse("#FF0000"),
+                        Color = SKColor.Parse("#A794D4"),
                     }
                 };
 
@@ -111,6 +114,7 @@ namespace ConfinApp.Views
                 {
                     Entries = avuiEntries
                 };
+                this.chartViewAvui.Chart.BackgroundColor = SKColor.Parse("#F7F7F7");
 
 
                 COVID19_Cat dosSetmanes = covidCatData[(covidCatData.Count / 2) - 1];
@@ -118,21 +122,22 @@ namespace ConfinApp.Views
                 {
                     new Microcharts.Entry(Int32.Parse(dosSetmanes.Total_Defuncions == null ? "0" : dosSetmanes.Total_Defuncions))
                     {
-                        Color = SKColor.Parse("#000000"),
+                        Color = SKColor.Parse("#CAC6D4"),
                     },
                     new Microcharts.Entry(Int32.Parse(dosSetmanes.Total_Altes == null ? "0" : dosSetmanes.Total_Altes))
                     {
-                        Color = SKColor.Parse("#008000"),
+                        Color = SKColor.Parse("#6A40D4"),
                     },
                     new Microcharts.Entry(Int32.Parse(dosSetmanes.Total_Casos == null ? "0" : dosSetmanes.Total_Casos))
                     {
-                        Color = SKColor.Parse("#FF0000"),
+                        Color = SKColor.Parse("#A794D4"),
                     }
                 };
                 this.chartViewSetmana.Chart = new DonutChart()
                 {
                     Entries = dosSetmanesEntries
                 };
+                this.chartViewSetmana.Chart.BackgroundColor = SKColor.Parse("#F7F7F7");
             }
             catch (Exception)
             {

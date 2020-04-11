@@ -2,24 +2,17 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="ConfinApp.Views.ContactePage"
-             BackgroundColor="{StaticResource WhiteColor}"
-             Title="Contacte">
-    <ContentPage.Resources>
-            <Color x:Key="Primary">#FFFFFF</Color>
-            <Color x:Key="LightTextColor">#999999</Color>
-            <Color x:Key="ButtonColor">#FF0000</Color>
-    </ContentPage.Resources>
-    
+             BackgroundColor="{StaticResource ContentPageBackgroundColor}"
+             Title="Contacte">    
     <ScrollView>
          <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            <StackLayout BackgroundColor="{StaticResource Primary}" 
-                         VerticalOptions="Start" 
+            <StackLayout VerticalOptions="Start" 
                          HorizontalOptions="Start"
-                         Padding="20,20,0,0">
+                         Margin="10,10,0,0">
                 <Label FontSize="17">
                     <Label.FormattedText>
                         <FormattedString>
@@ -34,10 +27,9 @@
                 </Label>
             </StackLayout>
             <ScrollView Grid.Row="1">
-                <StackLayout BackgroundColor="{StaticResource Primary}" 
-                             Orientation="Vertical" 
-                             Padding="20,10,0,0"
-                             Spacing="1">
+                <StackLayout Orientation="Vertical"
+                             Margin="10,20,0,0"
+                             Spacing="5">
                     <StackLayout Orientation="Vertical"
                                  VerticalOptions="Start"
                                  HorizontalOptions="Start">
@@ -61,7 +53,7 @@
                                     Text="Truca 012 Informació" 
                                     Command="{Binding InformacioCommand, Mode=OneWay}"
                                     CommandParameter="tel:012"
-                                    BackgroundColor="#D8D8D8"
+                                    BackgroundColor="{StaticResource ButtonContactaColor}"
                                     TextColor="Black"
                                     FontFamily="{StaticResource HelveticaMdFont}"/>
                         </StackLayout>
@@ -69,7 +61,7 @@
                     <StackLayout Orientation="Vertical"
                                  VerticalOptions="Start"
                                  HorizontalOptions="Fill"
-                                 Padding="0,10,0,0">
+                                 Margin="0,10,0,0">
                         <Label FontSize="17">
                             <Label.FormattedText>
                                 <FormattedString>
@@ -90,7 +82,7 @@
                                     Text="Truca 061 CatSalut" 
                                     Command="{Binding CatSalutCommand, Mode=OneWay}"
                                     CommandParameter="tel:061"
-                                    BackgroundColor="#D8D8D8"
+                                    BackgroundColor="{StaticResource ButtonContactaColor}"
                                     TextColor="Black"
                                     FontFamily="{StaticResource HelveticaMdFont}"/>
                         </StackLayout>
@@ -98,7 +90,7 @@
                     <StackLayout Orientation="Vertical"
                                  VerticalOptions="Start"
                                  HorizontalOptions="Fill"
-                                 Padding="0,10,0,0">
+                                 Margin="0,10,0,0">
                         <Label FontSize="17">
                             <Label.FormattedText>
                                 <FormattedString>
@@ -119,7 +111,7 @@
                                     Text="Truca 112 Mossos" 
                                     Command="{Binding MossosCommand, Mode=OneWay}"
                                     CommandParameter="tel:112"
-                                    BackgroundColor="#D8D8D8"
+                                    BackgroundColor="{StaticResource ButtonContactaColor}"
                                     TextColor="Black"
                                     FontFamily="{StaticResource HelveticaMdFont}"/>
                         </StackLayout>
@@ -127,12 +119,12 @@
                     <StackLayout Orientation="Vertical"
                                  VerticalOptions="Start"
                                  HorizontalOptions="Fill"
-                                 Padding="0,10,0,0">
+                                 Margin="0,10,0,0">
                         <Label FontSize="17">
                             <Label.FormattedText>
                                 <FormattedString>
                                     <FormattedString.Spans>
-                                        <Span Text="Pateixes alguna agressió?" 
+                                        <Span Text="Pateixes violència de gènere o intrafamiliar?" 
                                               FontFamily="{StaticResource HelveticaMdFont}" 
                                               FontSize="17"
                                               TextColor="Black"/>
@@ -148,7 +140,7 @@
                                     Text="Truca'ns" 
                                     Command="{Binding TrucansCommand, Mode=OneWay}"
                                     CommandParameter="tel:900900120"
-                                    BackgroundColor="#D8D8D8"
+                                    BackgroundColor="{StaticResource ButtonContactaColor}"
                                     TextColor="Black"
                                     FontFamily="{StaticResource HelveticaMdFont}"/>
                             <Button WidthRequest="143"
@@ -156,7 +148,7 @@
                                     Text="Escriu-nos" 
                                     Command="{Binding EscriunosCommand, Mode=OneWay}"
                                     CommandParameter="https://wa.me/+34671778540/?text="
-                                    BackgroundColor="#D8D8D8"
+                                    BackgroundColor="{StaticResource ButtonContactaColor}"
                                     TextColor="Black"
                                     FontFamily="{StaticResource HelveticaMdFont}"/>
                         </StackLayout>
@@ -164,7 +156,7 @@
                     <StackLayout Orientation="Vertical"
                                  VerticalOptions="Start"
                                  HorizontalOptions="Fill"
-                                 Padding="0,10,0,0">
+                                 Margin="0,10,0,0">
                         <Label FontSize="17">
                             <Label.FormattedText>
                                 <FormattedString>
@@ -185,15 +177,15 @@
                                     Text="Truca 112 Emergències" 
                                     Command="{Binding EmergenciesCommand, Mode=OneWay}"
                                     CommandParameter="tel:112"
-                                    BackgroundColor="#D8D8D8"
-                                    TextColor="Black"
+                                    BackgroundColor="{StaticResource ButtonSOSColor}"
+                                    TextColor="White"
                                     FontFamily="{StaticResource HelveticaMdFont}"/>
                         </StackLayout>
                     </StackLayout>
                     <StackLayout Orientation="Vertical"
                                  VerticalOptions="Start"
                                  HorizontalOptions="Fill"
-                                 Padding="0,20,0,0">
+                                 Margin="0,20,0,0">
                         <Label FontSize="17">
                             <Label.FormattedText>
                                 <FormattedString>

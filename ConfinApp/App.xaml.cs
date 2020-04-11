@@ -1,4 +1,8 @@
-﻿using ConfinApp.Views;
+﻿using ConfinApp.Services.Identity;
+using ConfinApp.Services.Routing;
+using ConfinApp.ViewModels;
+using ConfinApp.Views;
+using Splat;
 using Xamarin.Forms;
 
 namespace ConfinApp
@@ -7,23 +11,18 @@ namespace ConfinApp
     {
         public App()
         {
+            InitializeRouters();
             InitializeComponent();
 
             MainPage = new AppShell();
-            //MainPage = new OnboardingPage(MainPage);
         }
 
-        protected override void OnStart()
+        private void InitializeRouters()
         {
-        }
+            Locator.CurrentMutable.RegisterLazySingleton<IRoutingService>(() => new ShellRoutingService());
+            Locator.CurrentMutable.RegisterLazySingleton<IIdentityService>(() => new IdentityServiceStub());
 
-        protected override void OnSleep()
-        {
-
-        }
-
-        protected override void OnResume()
-        {
+            Locator.CurrentMutable.Register(() => new OnboardingViewModel());
         }
     }
 }
