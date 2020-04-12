@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.x2xx.confinapp">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionName="0.1" package="com.x2xx.confinapp" android:versionCode="3">
 	<uses-sdk android:minSdkVersion="28" android:targetSdkVersion="28" />
 	<application android:label="NormalitApp" android:usesCleartextTraffic="true">
 		<receiver android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver" android:exported="false" />

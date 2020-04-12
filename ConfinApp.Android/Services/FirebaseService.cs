@@ -19,10 +19,14 @@ namespace ConfinApp.Droid.Services
             string messageBody = string.Empty;
             string title = string.Empty;
             string redirectTo = string.Empty;
+            string redirectToURL = string.Empty;
 
             if (message.GetNotification() != null)
             {
+                title = message.GetNotification().Title;
                 messageBody = message.GetNotification().Body;
+                redirectTo = message.Data["redirectTo"];
+                redirectToURL = message.Data["redirectToURL"];
             }
 
             // NOTE: test messages sent via the Azure portal will be received here
@@ -31,10 +35,11 @@ namespace ConfinApp.Droid.Services
                 title = message.Data["title"];
                 messageBody = message.Data["body"];
                 redirectTo = message.Data["redirectTo"];
+                redirectToURL = message.Data["redirectToURL"];
             }
 
             // convert the incoming message to a local notification
-            SendLocalNotification(title, messageBody, redirectTo);
+            SendLocalNotification(title, messageBody, redirectTo, redirectToURL);
 
             // send the incoming message directly to the MainPage
             //SendMessageToMainPage(messageBody);
@@ -45,12 +50,22 @@ namespace ConfinApp.Droid.Services
             SendRegistrationToServer(token);
         }
 
-        void SendLocalNotification(string title, string body, string redirectTo)
+        void SendLocalNotification(string title, string body, string redirectTo, string redirectToURL)
         {
-            //var intent = new Intent(this, typeof(MainActivity));
-            var intent = new Intent(Intent.ActionView);
-            intent.SetPackage("com.google.android.youtube");
-            intent.SetData(Android.Net.Uri.Parse("https://www.youtube.com/watch?v=vKRWFOiF_hM"));
+            Intent intent;
+            switch (redirectTo.ToUpper())
+            {
+                case "YOUTUBE":
+                    intent = new Intent(Intent.ActionView);
+                    intent.SetPackage("com.google.android.youtube");
+                    intent.SetData(Android.Net.Uri.Parse(redirectToURL));
+                    break;
+
+                default:
+                    intent = new Intent(this, typeof(MainActivity));
+                    break;
+            }
+            
 
 
             intent.AddFlags(ActivityFlags.ClearTop);
@@ -59,11 +74,17 @@ namespace ConfinApp.Droid.Services
 
             var notificationBuilder = new NotificationCompat.Builder(this, AppConstants.NotificationChannelName)
                 .SetContentTitle(title)
-                .SetSmallIcon(Resource.Drawable.icon)
+                .SetSmallIcon(Resource.Mipmap.icon)
                 .SetContentText(body)
                 .SetAutoCancel(true)
                 .SetShowWhen(false)
                 .SetContentIntent(pendingIntent);
+
+            NotificationCompat.BigTextStyle bigTextStyle = new NotificationCompat.BigTextStyle();
+            bigTextStyle.SetBigContentTitle(title);
+            bigTextStyle.BigText(body);
+            notificationBuilder.SetStyle(bigTextStyle);
+
 
             if (Build.VERSION.SdkInt >= BuildVersionCodes.O)
             {
